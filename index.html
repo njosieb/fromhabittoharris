@@ -2,22 +2,38 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">{{site.bride}} loves {{site.groom}}</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<section id="about-us">
+  <div class="wrapper">
+    <h1 class="section-header">About Us</h1>
+  </div>
+</section>
+<section id="party">
+  <div class="wrapper">
+    <h1 class="section-header">Wedding Party</h1>
+  </div>
+</section>
+<section id="ceremony">
+  <div class="wrapper">
+    <h1 class="section-header">Ceremony</h1>
+  </div>
+</section>
+<section id="reception">
+  <div class="wrapper">
+    <h1 class="section-header">Reception</h1>
+  </div>
+</section>
+<section id="hotel">
+  <div class="wrapper">
+    <h1 class="section-header">Accomodations</h1>
+  </div>
+</section>
+<section id="registry">
+  <div class="wrapper">
+    <h1 class="section-header">Registry</h1>
+  </div>
+</section>
+<section id="photos">
+  <div class="wrapper">
+    <h1 class="section-header">Photos</h1>
+  </div>
+</section>
