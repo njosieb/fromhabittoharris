@@ -1,40 +1,24 @@
 ---
-layout: default
+layout: home
 ---
 
-<section id="about-us">
+<section id="top">
   <div class="wrapper">
-    <h1 class="section-header">About Us</h1>
+    <h1 class="section-header">NINA AND CHARLIE ARE GETTING MARRIED!</h1>
   </div>
 </section>
-<section id="party">
-  <div class="wrapper">
-    <h1 class="section-header">Wedding Party</h1>
-      <p>"Meet Our Party People!"</p>
-  </div>
-</section>
-<section id="ceremony">
-  <div class="wrapper">
-    <h1 class="section-header">Ceremony</h1>
-  </div>
-</section>
-<section id="reception">
-  <div class="wrapper">
-    <h1 class="section-header">Reception</h1>
-  </div>
-</section>
-<section id="hotel">
-  <div class="wrapper">
-    <h1 class="section-header">Accomodations</h1>
-  </div>
-</section>
-<section id="registry">
-  <div class="wrapper">
-    <h1 class="section-header">Registry</h1>
-  </div>
-</section>
-<section id="photos">
-  <div class="wrapper">
-    <h1 class="section-header">Photos</h1>
-  </div>
-</section>
+
+{% for section in site.data.sections %}
+
+  <section id="{{section.id}}" style="background-image: url({{site.baseurl}}/assets/{{ section.photo}});">
+    <div class="wrapper">
+      <h1 class="section-header">{{section.title}}</h1>
+        <div class="section-body">
+        
+          {% include_relative _sections/{{section.id}}.html %}
+
+        </div>
+    </div>
+  </section>
+
+{% endfor %}

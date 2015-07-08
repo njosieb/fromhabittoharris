@@ -1,5 +1,28 @@
+main {
+  margin-left: 200px;
+  margin-top: 62px;
+}
+
+aside {
+  position: fixed;
+  left: 0;
+  top: 62px;
+  z-index: 9;
+  width: 200px;
+}
+
 section {
 	min-height: 100vh;
+  border-top: 62px solid transparent;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  margin-top: -62px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: lightgray;
+  background-blend-mode: overlay;
 
 	.section-header {
 		text-align: center;
@@ -8,53 +31,80 @@ section {
 		font-family: "Lobster Two";
 	}
 }
+
+.section-link {
+  display: block;
+  position: relative;
+  padding: 12px 18px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+
+  &:before, &:after {
+    content: '';
+    z-index: -1;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  }
+
+  &:before {
+    border: 2px solid #37474f;
+    opacity: 0;
+    background: #7986cb;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
+    border-width: 1px;
+    border-color: #7986cb;
+  }
+
+  &:after {
+    background: transparent;
+  }
+
+  &:hover {
+    color: white;
+
+    &:before {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    &:after {
+      opacity: 0;
+      -webkit-transform: scale3d(0.8, 0.8, 1);
+      transform: scale3d(0.8, 0.8, 1);
+    }
+  }
+}
+
 #about-us {
   background-image: url("https://scontent-ord1-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/1926701_724232221000976_3789967608792683023_n.jpg?oh=41e289cd8b5d0f93e18b6212dde16377&oe=561A3A1C");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: lightgray;
-  background-blend-mode: overlay;
 }
 #party {
   background-image: url(http://ak7.picdn.net/shutterstock/videos/3028288/preview/stock-footage-many-glasses-of-champagne-on-the-table.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: lightgray;
-  background-blend-mode: overlay;
 }
 #ceremony {
   background-image: url(https://upload.wikimedia.org/wikipedia/en/e/e4/St._Louis_Cathedral_Basilica_Main_Isle.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: lightgray;
-  background-blend-mode: overlay;
 }
 #reception {
   background-image: url(http://universalwebsites.theknot.com.s3.amazonaws.com/UniversalWebsites/PageMainImage/6636066345832196/2523303/36432026/med/TheChase.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: lightgray;
-  background-blend-mode: overlay;
 }
 #hotel {
   background-image: url(http://images.fineartamerica.com/images-medium-large-5/st-louis-skyline-license-plate-art-design-turnpike.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: lightgray;
-  background-blend-mode: overlay;
 }
 #registry {
   background-image: url(http://blog.weddingwire.com/wp-content/uploads/2014/03/breakfast.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: lightgray;
-  background-blend-mode: overlay;
 }
 h3 {
   font-size: 40px;
