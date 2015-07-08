@@ -1,0 +1,34 @@
+---
+- title: About Us
+  id: about-us
+  photo: baseball.jpg
+  icon: venus-mars
+
+- title: Wedding Party
+  id: party
+  photo: champagne.jpg
+  icon: glass
+
+- title: Ceremony
+  id: ceremony
+  photo: cathedral.jpg
+  icon: diamond
+
+- title: Reception
+  id: reception
+  photo: chase.jpg
+  icon: birthday-cake
+
+- title: Accomodations
+  id: hotel
+  photo: stl.jpg
+  icon: bed
+
+- title: Registry
+  id: registry
+  photo: breakfast.jpg
+  icon: gift
+
+- title: Photos
+  id: photos
+  icon: instagram
