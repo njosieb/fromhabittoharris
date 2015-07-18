@@ -1,23 +1,42 @@
 main {
-  margin-left: 200px;
-  margin-top: 62px;
+  @include flex-display();
+  @include justify-content(flex-end);
 }
 
 aside {
   position: fixed;
   left: 0;
-  top: 62px;
+  top: 55px;
   z-index: 9;
   width: 200px;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: transform .3s;
+}
+
+body.no-header {
+  .page-content {
+    width: 100%;
+  }
+
+  aside {
+    transform: translateX(-100%);
+  }
+
+  .site-header {
+    transform: translateY(-100%);
+  }
 }
 
 section {
 	min-height: 100vh;
-  border-top: 62px solid transparent;
+  border-top: 55px solid transparent;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  margin-top: -62px;
+  margin-top: -55px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
