@@ -6,8 +6,13 @@
 </description>
     <link>http://yourdomain.com/fromhabittoharris/</link>
     <atom:link href="http://yourdomain.com/fromhabittoharris/feed.xml" rel="self" type="application/rss+xml"/>
+<<<<<<< HEAD
     <pubDate>Sun, 19 Jul 2015 11:59:12 -0600</pubDate>
     <lastBuildDate>Sun, 19 Jul 2015 11:59:12 -0600</lastBuildDate>
+=======
+    <pubDate>Sun, 19 Jul 2015 11:45:19 -0600</pubDate>
+    <lastBuildDate>Sun, 19 Jul 2015 11:45:19 -0600</lastBuildDate>
+>>>>>>> Added animating header
     <generator>Jekyll v2.5.3</generator>
     
   </channel>
