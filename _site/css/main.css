@@ -544,24 +544,23 @@ section {
       -webkit-transform: scale3d(0.8, 0.8, 1);
       transform: scale3d(0.8, 0.8, 1); }
 
-#about-us {
-  background-image: url("https://scontent-ord1-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/1926701_724232221000976_3789967608792683023_n.jpg?oh=41e289cd8b5d0f93e18b6212dde16377&oe=561A3A1C"); }
-
-#party {
-  background-image: url(http://ak7.picdn.net/shutterstock/videos/3028288/preview/stock-footage-many-glasses-of-champagne-on-the-table.jpg); }
-
-#ceremony {
-  background-image: url(https://upload.wikimedia.org/wikipedia/en/e/e4/St._Louis_Cathedral_Basilica_Main_Isle.jpg); }
-
-#reception {
-  background-image: url(http://universalwebsites.theknot.com.s3.amazonaws.com/UniversalWebsites/PageMainImage/6636066345832196/2523303/36432026/med/TheChase.jpg); }
-
-#hotel {
-  background-image: url(http://images.fineartamerica.com/images-medium-large-5/st-louis-skyline-license-plate-art-design-turnpike.jpg); }
-
-#registry {
-  background-image: url(http://blog.weddingwire.com/wp-content/uploads/2014/03/breakfast.jpg); }
+#party li {
+  font-family: cursive;
+  font-size: larger; }
 
 h3 {
   font-size: 40px;
   margin-left: auto; }
+
+.party-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
