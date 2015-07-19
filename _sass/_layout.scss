@@ -35,6 +35,8 @@ html {
     -webkit-transition: transform 0.3s;
     -moz-transition: transform 0.3s;
     transition: transform .3s;
+    -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+    backface-visibility: hidden;
 }
 
 .site-title {
