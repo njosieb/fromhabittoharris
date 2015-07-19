@@ -21,6 +21,14 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+p {
+    font-size: 22px;
+    line-height: 33px;
+    word-wrap: break-word;
+    font-family: Georgia;
+    color: rgba(0,0,0,.8);
+}
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */

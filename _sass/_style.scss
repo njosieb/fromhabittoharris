@@ -1,32 +1,92 @@
 main {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  -webkit-perspective-origin: 0% 50%;
+  perspective-origin: 0% 50%;;
+  position: relative;
+  overflow:hidden;
+  height: 100%;
+  background-color: lightgray;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    display: block;
+    z-index: 9;
+    background: rgba(0,0,0,0.2);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  }
+}
+
+.page-content {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1000px;
+  z-index: 8;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
   @include flex-display();
-  @include justify-content(flex-end);
+  @include flex-direction(column);
 }
 
 aside {
   position: fixed;
   left: 0;
   top: 55px;
-  z-index: 9;
-  width: 200px;
-  height: 100%;
-  background-color: white;
+  z-index: 1;
+  width: 300px;
+  height: calc(100% - 55px);
+  background-color: #2980b9;
   overflow: hidden;
-  transform: translateX(0);
-  transition: transform .3s;
+  visibility: hidden;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, -300px);
+  transform: translate3d(0, 0, -300px);;
+  transition: all 0.5s;
 }
 
-body.no-header {
-  .page-content {
-    width: 100%;
+body {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  &.no-header {
+    .site-header {
+      transform: translateY(-100%);
+    }
   }
 
-  aside {
-    transform: translateX(-100%);
-  }
+  &.sidebar {
+    .site-header {
+      transform: translateY(0);
+    }
+    aside {
+      visibility: visible;
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: transform 0.5s;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    .page-content {
+      -webkit-transform: translate3d(300px, 0, 0);
+      transform: translate3d(300px, 0, 0);
+    }
 
-  .site-header {
-    transform: translateY(-100%);
+    main:after {
+      width: calc(100% - 300px);
+      height: 100%;
+      opacity: 1;
+      -webkit-transition: opacity 0.5s;
+      transition: opacity 0.5s;
+    }
   }
 }
 
@@ -54,6 +114,7 @@ section {
 .section-link {
   display: block;
   position: relative;
+  color: #f3efe0;
   padding: 12px 18px;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
@@ -116,5 +177,5 @@ h3 {
 }
 .party-container{
 	@include flex-display();
-	@include justify-content(space-around); 
+	@include justify-content(space-around);
 }

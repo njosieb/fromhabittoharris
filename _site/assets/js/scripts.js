@@ -1,9 +1,31 @@
 (function($) {
   $(document).ready(function() {
     var doc = this;
+    doc.sidebarVisible = false;
 
-    var sectionTopOffset = $('#about-us').offset().top;
     var body = $('body');
+    var sectionTopOffset = $('#about-us').offset().top;
+
+    var firstWaypoint = new Waypoint({
+      element: document.getElementById('about-us'),
+      handler: function(direction) {
+        if (direction == 'down') {
+          body.removeClass('no-header');
+        } else if (direction == 'up') {
+          body.addClass('no-header');
+        }
+      },
+      context: document.getElementById('page-body')
+    })
+
+    $('#reveal-menu').click(function() {
+        doc.sidebarVisible = !doc.sidebarVisible;
+        if (doc.sidebarVisible) {
+          body.addClass('sidebar');
+        } else {
+          body.removeClass('sidebar');
+        }
+    })
 
     function isScrollEnough() {
       if (window.pageYOffset >= sectionTopOffset) {
@@ -15,63 +37,8 @@
 
     if (isScrollEnough()) {
       body.removeClass('no-header');
-      doc.headerVisible = true;
     } else {
       body.addClass('no-header');
-      doc.headerVisible = false;
     }
-
-    $(window).scroll(function() {
-      var set = isScrollEnough();
-
-      if (set != doc.headerVisible) {
-        if (set) {
-          setTimeout(function() {
-            body.removeClass('no-header');
-          }, 250);
-          doc.headerVisible = true;
-        } else {
-          setTimeout(function() {
-            body.addClass('no-header');
-          }, 250);
-          doc.headerVisible = false;
-        }
-      }
-    })
   })
 })(jQuery);
-
-// var animateHeader = (function() {
-//
-// 	var docElem = document.documentElement,
-// 		body = $('body'),
-// 		didScroll = false,
-// 		changeHeaderOn = document.getElementById('about-us').offsetTop;
-//
-// 	function init() {
-// 		window.addEventListener( 'scroll', function( event ) {
-// 			if( !didScroll ) {
-// 				didScroll = true;
-// 				setTimeout( scrollPage, 250 );
-// 			}
-// 		}, false );
-// 	}
-//
-// 	function scrollPage() {
-// 		var sy = scrollY();
-// 		if ( sy >= changeHeaderOn ) {
-// 			body.removeClass('no-header');
-// 		}
-// 		else {
-// 			body.addClass('no-header' );
-// 		}
-// 		didScroll = false;
-// 	}
-//
-// 	function scrollY() {
-// 		return window.pageYOffset || docElem.scrollTop;
-// 	}
-//
-// 	init();
-//
-// })();

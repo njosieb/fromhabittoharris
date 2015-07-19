@@ -8,15 +8,17 @@
     {% include header.html %}
 
     <main>
+
       {% include sidebar.html %}
 
-      <div class="page-content">
+      <div id="page-body" class="page-content">
         {{ content }}
+
+        {% include footer.html %}
+
       </div>
 
     </main>
-
-    {% include footer.html %}
 
   </body>
 
