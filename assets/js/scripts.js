@@ -27,6 +27,11 @@
         }
     })
 
+    $('.section-link').click(function() {
+      body.removeClass('sidebar');
+      doc.sidebarVisible = false;
+    })
+
     function isScrollEnough() {
       if (window.pageYOffset >= sectionTopOffset) {
         return true
