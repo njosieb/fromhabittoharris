@@ -1,20 +1,27 @@
-// html {
-//   height: 100%;
-//   overflow: hidden;
-//   position: relative;
-// }
-//
-// body {
-//   height: 100%;
-//   position: relative;
-//   overflow: auto;
-//   overflow-x: hidden;
-//   overflow-y: auto;
-// }
-
+html {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
 /**
  * Site header
  */
+#header-wrapper {
+  @include flex-display();
+  @include justify-content(space-between);
+  @include align-items(center);
+}
+
+#reveal-menu {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  font-size: 24px;
+  text-align: left;
+  outline: none !important;
+  cursor: pointer;
+}
+
 .site-header {
     height: 55px;
     position: fixed;
@@ -22,7 +29,7 @@
     width: 100%;
     left: 0;
     background-color: white;
-    z-index: 9;
+    z-index: 10;
     overflow: hidden;
     transform: translateY(0);
     -webkit-transition: transform 0.3s;
@@ -35,7 +42,8 @@
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
-    float: left;
+    @include flex(1, 1, auto);
+    text-align: right;
 
     &,
     &:visited {
@@ -155,8 +163,7 @@
  * Page content
  */
 .page-content {
-  width: calc(100% - 200px);
-  transform: translate3d(0,0,0);
+  width: 100%;
 }
 
 .page-heading {
