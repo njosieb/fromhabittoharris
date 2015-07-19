@@ -35,6 +35,11 @@ main {
   transition: transform 0.5s;
   @include flex-display();
   @include flex-direction(column);
+
+  @include media-query($on-palm) {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 aside {
@@ -115,7 +120,8 @@ section {
   display: block;
   position: relative;
   color: #f3efe0;
-  padding: 12px 18px;
+  padding: 10px 18px;
+  font-size: 21px;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
