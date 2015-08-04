@@ -1,7 +1,6 @@
 ---
 - name: Jenny
   photo: "jenny.jpg"
-  blurb: "hi there"
 
 - name: Jane
   photo:

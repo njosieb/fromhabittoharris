@@ -1,24 +1,41 @@
 <p>
   Ain't No Party Like a Blaida-Harris Party, cuz a Blaida-Harris Party Don't Stop!
 
-  Nina and Charlie are so excited to have these amazing relatives and friends stand by their side on their wedding day!
+  Nina and Charlie are so excited to have these amazing relatives and friends stand by their side on their wedding day!</p>
 <div class="party-container">
-  <ul>Bridesmaids
+  <div id="bridesmaids">
+      <h3>Bridesmaids</h3>
+  <ul class="party-members">
       {% for bridesmaid in site.data.bridesmaids %}
-      <li>{{bridesmaid.name}}</li>
-    
+      <li class="party-card">
+        <div class="front">
+          <img src="/assets/{{bridesmaid.photo}}"/>
+        </div>
+        <div class="back">
+          <div class="bridesmaid-name">{{bridesmaid.name}}</div>
+          <div class="bridesmaid-blurb">{{bridesmaid.blurg}}</div>
+        </div>
+        </li>
+
       {% endfor %}
   </ul>
+</div>
 
- <ul>Groomsmen
-   <li>Bill</li>
-   <li>George</li>
-   <li>Eddie</li>
-   <li>Will</li>
-   <li>Matt</li>
-   <li>Pat</li>
-   <li>Tyler</li>
-   <li>Andy</li>
+<div id="groomsmen">
+    <h3>Groomsmen</h3>
+ <ul class="party-members">
+   {% for groomsman in site.data.groomsmen %}
+   <li class="party-card">
+     <div class="front">
+       <img src="/assets/{{groomsman.photo}}"/>
+     </div>
+     <div class="back">
+       <div class="groomsman-name">{{groomsman.name}}</div>
+       <div class="groomsman-blurb">{{groomsman.blurg}}</div>
+     </div>
+     </li>
+
+   {% endfor %}
  </ul>
 </div>
-</p>
+</div>
