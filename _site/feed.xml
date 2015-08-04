@@ -4,10 +4,10 @@
     <title>#FromHabitToHarris</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://yourdomain.com/fromhabittoharris/</link>
-    <atom:link href="http://yourdomain.com/fromhabittoharris/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Jul 2015 11:59:12 -0600</pubDate>
-    <lastBuildDate>Sun, 19 Jul 2015 11:59:12 -0600</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 03 Aug 2015 21:41:19 -0500</pubDate>
+    <lastBuildDate>Mon, 03 Aug 2015 21:41:19 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
   </channel>
