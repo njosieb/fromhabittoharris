@@ -4,22 +4,29 @@
   blurb: "hi there"
 
 - name: Jane
-  photo:
+  photo: "jane.jpg"
+  blurb:
 
 - name: Courtney
-  photo:
-
-- name: Monica
-  photo:
+  photo: "courtney.jpg"
+  blurb:
 
 - name: Ann
-  photo:
+  photo: "anne.jpg"
+  blurb:
+
+- name: Monica
+  photo: "monica.jpg"
+  blurb:
 
 - name: Maddie
-  photo:
+  photo: "maddie.jpg"
+  blurb:
 
 - name: Rebecca
-  photo:
+  photo: "rebecca.jpg"
+  blurb:
 
 - name: Andi
-  photo:
+  photo: "andi.jpg"
+  blurb:
