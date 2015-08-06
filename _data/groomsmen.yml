@@ -1,24 +1,32 @@
 ---
-- name: Jenny
-  photo: "jenny.jpg"
-
-- name: Jane
+- name: Bill
   photo:
+  blurb:
 
-- name: Courtney
+- name: George
   photo:
+  blurb:
 
-- name: Monica
+- name: Eddie
   photo:
+  blurb:
 
-- name: Ann
-  photo:
+- name: Will
+  photo: "will.jpg"
+  blurb:
 
-- name: Maddie
-  photo:
+- name: Patrick
+  photo: "patrick.jpg"
+  blurb:
 
-- name: Rebecca
+- name: Tyler
   photo:
+  blurb:
 
-- name: Andi
+- name: Matt
   photo:
+  blurb:
+
+- name: Andy
+  photo:
+  blurb:

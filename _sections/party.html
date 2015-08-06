@@ -7,7 +7,7 @@
       <h3>Bridesmaids</h3>
   <ul class="party-members">
       {% for bridesmaid in site.data.bridesmaids %}
-      <li class="party-card">
+      <li class="party-card" id="{{bridesmaid.name}}">
         <div class="front">
           <img src="/assets/{{bridesmaid.photo}}"/>
         </div>
@@ -25,7 +25,7 @@
     <h3>Groomsmen</h3>
  <ul class="party-members">
    {% for groomsman in site.data.groomsmen %}
-   <li class="party-card">
+   <li class="party-card" id="{{groomsman.name}}">
      <div class="front">
        <img src="/assets/{{groomsman.photo}}"/>
      </div>
