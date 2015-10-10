@@ -569,6 +569,22 @@ body {
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s; }
 
+#top {
+  position: relative; }
+  #top object {
+    position: absolute;
+    top: 0;
+    /* fill vertically */
+    width: auto;
+    height: 100vh;
+    /* center horizontally */
+    left: -1000px;
+    right: -1000px;
+    margin-left: auto;
+    margin-right: auto;
+    /* for testing */
+    z-index: 0; }
+
 section {
   min-height: 100vh;
   border-top: 55px solid transparent;

@@ -1,12 +1,10 @@
 ---
 layout: home
 ---
-
+<!-- 
 <section id="top">
-  <div class="wrapper">
-    <h1 class="section-header">NINA AND CHARLIE ARE GETTING MARRIED!</h1>
-  </div>
-</section>
+  <object type="image/svg+xml" data="assets/header-back.svg"></object>
+</section> -->
 
 {% for section in site.data.sections %}
 
@@ -14,7 +12,7 @@ layout: home
     <div class="wrapper">
       <h1 class="section-header">{{section.title}}</h1>
         <div class="section-body">
-        
+
           {% include_relative _sections/{{section.id}}.html %}
 
         </div>
