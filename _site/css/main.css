@@ -29,7 +29,6 @@ p {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
@@ -503,6 +502,20 @@ main {
     -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
     transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; }
 
+.left-box {
+  text-align: center;
+  font-family: "Rock Salt";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 40px;
+  top: 50%;
+  left: 30px; }
+  .left-box h1 {
+    font-size: 4.5em; }
+  .left-box h6 {
+    font-size: 2em; }
+
 .page-content {
   position: relative;
   height: 100%;
@@ -568,6 +581,24 @@ body {
     opacity: 1;
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s; }
+
+#top {
+  position: relative;
+  background-color: transparent;
+  background-blend-mode: initial; }
+  #top object {
+    position: absolute;
+    top: 0;
+    /* fill vertically */
+    width: auto;
+    height: 100vh;
+    /* center horizontally */
+    left: -1000px;
+    right: -1000px;
+    margin-left: auto;
+    margin-right: auto;
+    /* for testing */
+    z-index: 0; }
 
 section {
   min-height: 100vh;
