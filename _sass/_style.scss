@@ -24,6 +24,25 @@ main {
   }
 }
 
+.left-box {
+  text-align: center;
+  font-family: "Rock Salt";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 40px;
+  top: 50%;
+  left: 30px;
+
+  h1 {
+    font-size: 4.5em;
+  }
+
+  h6 {
+    font-size: 2em;
+  }
+}
+
 .page-content {
   position: relative;
   height: 100%;
@@ -94,6 +113,27 @@ body {
     }
   }
 }
+
+#top {
+  position: relative;
+  background-color: transparent;
+  background-blend-mode: initial;
+
+  object {
+    position: absolute;
+    top: 0;
+    /* fill vertically */
+    width: auto;
+    height: 100vh;
+    /* center horizontally */
+    left: -1000px;
+    right: -1000px;
+    margin-left: auto;
+    margin-right: auto;   /* for testing */
+    z-index: 0;
+  }
+}
+
 
 section {
 	min-height: 100vh;
