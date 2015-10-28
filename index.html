@@ -13,15 +13,13 @@ layout: home
 
 {% for section in site.data.sections %}
 
-  <section id="{{section.id}}" style="background-image: url({{site.baseurl}}/assets/{{ section.photo}});">
-    <div class="wrapper">
-      <h1 class="section-header">{{section.title}}</h1>
-        <div class="section-body">
+  <section id="{{section.id}}">
+    <h1 class="section-header">{{section.title}}</h1>
+      <div class="section-body">
 
-          {% include_relative _sections/{{section.id}}.html %}
+        {% include_relative _sections/{{section.id}}.html %}
 
-        </div>
-    </div>
+      </div>
   </section>
 
 {% endfor %}

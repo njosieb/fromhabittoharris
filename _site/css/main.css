@@ -1,6 +1,9 @@
 /**
  * Reset some basic elements
  */
+* {
+  box-sizing: border-box; }
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -502,6 +505,43 @@ main {
     -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
     transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; }
 
+#registry .section-body {
+  padding: 80px 0 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.svg-holder {
+  flex: 1 0 33%;
+  position: relative;
+  padding: 0 20px;
+  display: block;
+  cursor: pointer; }
+  .svg-holder svg {
+    height: 100%;
+    width: 100%; }
+    .svg-holder svg path {
+      transition: fill .6s; }
+  .svg-holder svg:not(:hover) path {
+    fill: grey !important; }
+
+.registry-link-holder {
+  flex: 1 0 33%;
+  position: relative;
+  padding: 0 20px; }
+  .registry-link-holder .registry-link {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: grey;
+    background-blend-mode: multiply;
+    transition: background-color .6s; }
+    .registry-link-holder .registry-link:hover {
+      background-color: transparent; }
+
 .left-box {
   text-align: center;
   font-family: "Rock Salt";
@@ -583,9 +623,11 @@ body {
     transition: opacity 0.5s; }
 
 #top {
-  position: relative;
-  background-color: transparent;
-  background-blend-mode: initial; }
+  min-height: 100vh;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
   #top object {
     position: absolute;
     top: 0;
@@ -601,22 +643,17 @@ body {
     z-index: 0; }
 
 section {
-  min-height: 100vh;
-  border-top: 55px solid transparent;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  margin-top: -55px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: lightgray;
-  background-blend-mode: overlay; }
+  position: relative; }
   section .section-header {
     text-align: center;
     font-style: italic;
     font-size: 48pt;
     font-family: "Lobster Two"; }
+
+.section-body {
+  overflow: auto;
+  position: relative;
+  padding: 0 80px; }
 
 .section-link {
   display: block;
