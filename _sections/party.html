@@ -8,9 +8,7 @@
   <ul class="party-members">
       {% for bridesmaid in site.data.bridesmaids %}
       <li class="party-card" id="{{bridesmaid.name}}">
-        <div class="front">
-          <img src="/assets/{{bridesmaid.photo}}"/>
-        </div>
+        <div class="front" style="background-image: url(/assets/{{bridesmaid.photo}})"></div>
         <div class="back">
           <div class="bridesmaid-name">{{bridesmaid.name}}</div>
           <div class="bridesmaid-blurb">{{bridesmaid.blurg}}</div>
@@ -26,9 +24,7 @@
  <ul class="party-members">
    {% for groomsman in site.data.groomsmen %}
    <li class="party-card" id="{{groomsman.name}}">
-     <div class="front">
-       <img src="/assets/{{groomsman.photo}}"/>
-     </div>
+     <div class="front" style="background-image: url(/assets/{{groomsman.photo}})"></div>
      <div class="back">
        <div class="groomsman-name">{{groomsman.name}}</div>
        <div class="groomsman-blurb">{{groomsman.blurg}}</div>
