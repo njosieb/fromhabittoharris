@@ -6,7 +6,6 @@ main {
   position: relative;
   overflow:hidden;
   height: 100%;
-  background-color: lightgray;
 
   &:after {
     position: absolute;
@@ -107,6 +106,7 @@ main {
   transition: transform 0.5s;
   @include flex-display();
   @include flex-direction(column);
+  background-color: lightgray;
 
   @include media-query($on-palm) {
     overflow-y: scroll;
@@ -188,7 +188,6 @@ body {
     z-index: 0;
   }
 }
-
 
 section {
   position: relative;
@@ -283,14 +282,14 @@ h3 {
 	@include justify-content(space-around);
 }
 .party-card .front {
-    overflow: hidden;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 img {
-    object-fit: cover;
-}
-#party {
-    overflow: auto;
+  object-fit: cover;
 }
 
 .party-container ul {
@@ -302,32 +301,30 @@ li.party-card {
   flex-basis: 50%;
   position: relative;
   height: 136px;
-  transition: all 2s;
+  transition: all .6s;
   width: 136px;
   transform-style: preserve-3d;
 }
 
 .front img {
-    position: absolute;
-    top: -20px;
+  position: absolute;
+  top: -20px;
 }
 .front, .back {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-    /* transform-style: preserve-3d; */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
 }
 
 .party-card .back {
-    z-index: 1;
-    transform: rotateY(-180deg);
-    background-color: white;
+  z-index: 1;
+  transform: rotateY(-180deg);
+  background-color: white;
 }
 
 li.party-card:hover {
-    transform: rotateY(180deg);
-    /* width: 5px; */
+  transform: rotateY(180deg);
 }
 
 ul.party-members {
