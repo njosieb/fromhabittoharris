@@ -18,7 +18,7 @@
       context: document.getElementById('page-body')
     })
 
-    $('#reveal-menu').click(function() {
+    $('#menu-reveal').click(function() {
         doc.sidebarVisible = !doc.sidebarVisible;
         if (doc.sidebarVisible) {
           body.addClass('sidebar');

@@ -3,23 +3,41 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$splash-font:      "Rock Salt";
+$fancy-font:       "Lobster Two";
 $base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+// Colors shamelessly taken from the excellent US CIO Web Standards
+// https://playbook.cio.gov/designstandards/visual-style/
+$blue-primary:     #0071bc;
+$blue-dark:        #205493;
+$blue-darker:      #112e51;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$blue-alt:         #02bfe7;
+$blue-alt-darker:  #046b99;
+$blue-alt-dark:    #00a6d2;
+$blue-alt-light:   #9bdaf1;
+$blue-alt-lighter: #e1f3f8;
+
+$red-color:        #e31c3d;
+$red-darker:       #981b1e;
+$red-dark:         #cd2026;
+$red-light:        #e59393;
+$red-lighter:      #f9dede;
+
+$black:            #212121;
+$grey-color:       #5b616b;
+$grey-dark:        #323a45;
+$grey-light:       #aeb0b5;
+$grey-lighter:     #d6d7d9;
+$grey-lightest:    #f1f1f1;
+
+$focus-color:      #3e94cf;
+$visited-color:    #4c2c92;
 
 // Width of the content area
 $content-width:    800px;
@@ -49,6 +67,7 @@ $on-laptop:        800px;
 				"mixins",
         "base",
         "layout",
-        "syntax-highlighting",
-        "style"
+        "style",
+        "sections/about",
+        "sections/registry"
 ;

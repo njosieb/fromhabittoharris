@@ -14,7 +14,7 @@
   <link rel="canonical" href="/">
   <link rel="alternate" type="application/rss+xml" title="#FromHabitToHarris" href="/feed.xml" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic|Rock+Salt' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic|Rock+Salt|<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,300,200italic,200,400italic,600italic,600' rel='stylesheet' type='text/css'>
 </head>
 
 
@@ -24,7 +24,7 @@
 
   <div id="header-wrapper" class="wrapper">
 
-    <button id="reveal-menu"><i class="fa fa-bars"></i></button>
+    <button id="menu-reveal"><i class="fa fa-bars"></i></button>
 
     <a class="site-title" href="/">#FromHabitToHarris</a>
 
@@ -57,7 +57,7 @@
 
 
       <div id="page-body" class="page-content">
-        <section id="top" style="background-image: url(/assets/stpats.jpg);">
+        <section id="top-section" style="background-image: url(/assets/stpats.jpg);">
   <div class="left-box">
     <h1>Nina</h1>
     <h6>&</h6>
@@ -69,43 +69,108 @@
 
 
   <section id="about-us">
-    <h1 class="section-header">About Us</h1>
+    <div class="wrapper">
+      <h1 class="section-header">About Us</h1>
       <div class="section-body">
 
-        <p>
-	Once upon a time, Charlie and Nina decided to be in two musicals at Chaminade, which is where they first met althought they did not spend much time together.
-</p>
-<p>
-	Athough they had met at this early time, it would be a few years before their paths crossed once more.
-</p>
-<p>
-	Both felt God calling them, in each of their lives to follow a path to discern a vocation- Charlie to the Seminary, to seriously discern if he was called to the Priesthood and Nina to the Convent to seriously discern if she was called to the religious life.
-	However after many years, 6.5 for Charlie and 3 for Nina, they both discovered that perhaps that was not what they were meant to do.
-</p>
-<p>
-	Their paths soon would cross again when Nina started working at St. Clare, where Charlie helped out as a Seminarian, mainly with the 8th Grade Luke 18 Retreat.  Even though Nina couldn't help but think Charlie was cute, she quickly removed any thought of anything happening with Charlie because he was still in the seminary and Nina is NOT a "chalice-chaser"! :)
-</p>
-<p>
-	But it wasn't until Halloween of 2013, after Charlie had left the seminary, when they would begin to get to know each other and start becoming very good friends.
-	Nina had arrived to the Halloween party first, and was welcoming people as they came in a few at a time.  When Charlie came in dressed as Waldo from "Where's Waldo" she immediately recognized him, and had this exact train of thought:
-		<ol>
-			<li>OMG!  It's Charlie Harris!</li>
-			<li>Oh, he's really cute but looks like he is super young. What is he like 21?</li>
-			<li>3) I heard he left the seminary...
-			<li>4) I wonder if he remembers me.</li>
-  </ol>
-	<p>
-  At one point during the party, Charlie and Nina began chatting on the back porch about how they had similar backgrounds in discerning their vocation.
-</p>
+        <div id="story-selection">
+	<div id="selection-container">
+		<div id="select-her" class="selection-holder">
+			<div class="selection-box" style="background-image: url(/assets/nina.jpg);">
+				<h3 class="selection-text">About Her</h3>
+			</div>
+		</div>
+		<div id="select-him" class="selection-holder">
+			<div class="selection-box" style="background-image: url(/assets/charlie.jpg);">
+				<h3 class="selection-text">About Him</h3>
+			</div>
+		</div>
+		<div id="select-met" class="selection-holder">
+			<div class="selection-box" style="background-image: url(/assets/barlouie.jpg);">
+				<h3 class="selection-text">How We Met</h3>
+			</div>
+		</div>
+		<div id="select-dating" class="selection-holder">
+			<div class="selection-box" style="background-image: url(/assets/jamestaylor.jpg)">
+				<h3 class="selection-text">Dating</h3>
+			</div>
+		</div>
+		<div id="select-proposal" class="selection-holder">
+			<div class="selection-box" style="background-image: url(/assets/engaged.jpg);">
+				<h3 class="selection-text">Popping the Question</h3>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="story-viewer">
+	<div id="story-controls">
+		<div id="select-back" class="control-button">
+			<span id="back-text" class="button-text">
+				<i class="fa fa-level-up fa-flip-horizontal"></i>
+				Back
+			</span>
+		</div>
+		<div id="select-next" class="control-button">
+			<span id="next-story-button" class="button-text">
+				<i class="fa fa-hand-o-right"></i>
+				Next
+			</span>
+		</div>
+	</div>
+	<div id="story-container">
+		<div id="story-about-her" class="story">
+			<h2 class="story-header">About Her</h2>
+			<p>
+				Once upon a time, Charlie and Nina decided to be in two musicals at Chaminade, which is where they first met althought they did not spend much time together.
+			</p>
+		</div>
+		<div id="story-about-him" class="story">
+			<h2 class="story-header">About Him</h2>
+			<p>
+				Athough they had met at this early time, it would be a few years before their paths crossed once more.
+			</p>
+		</div>
+		<div id="story-how-met" class="story">
+			<h2 class="story-header">How We Met</h2>
+			<p>
+				Both felt God calling them, in each of their lives to follow a path to discern a vocation- Charlie to the Seminary, to seriously discern if he was called to the Priesthood and Nina to the Convent to seriously discern if she was called to the religious life.
+				However after many years, 6.5 for Charlie and 3 for Nina, they both discovered that perhaps that was not what they were meant to do.
+			</p>
+		</div>
+		<div id="story-dating" class="story">
+			<h2 class="story-header">Dating Sucks</h2>
+			<h4 class="story-subheader">(but not this time!)</h4>
+			<p>
+				Their paths soon would cross again when Nina started working at St. Clare, where Charlie helped out as a Seminarian, mainly with the 8th Grade Luke 18 Retreat.  Even though Nina couldn't help but think Charlie was cute, she quickly removed any thought of anything happening with Charlie because he was still in the seminary and Nina is NOT a "chalice-chaser"! :)
+			</p>
+		</div>
+		<div id="story-engagement" class="story">
+			<h2 class="story-header">Popping the Question</h2>
+			<p>
+				But it wasn't until Halloween of 2013, after Charlie had left the seminary, when they would begin to get to know each other and start becoming very good friends.
+				Nina had arrived to the Halloween party first, and was welcoming people as they came in a few at a time.  When Charlie came in dressed as Waldo from "Where's Waldo" she immediately recognized him, and had this exact train of thought:
+				<ol>
+					<li>OMG!  It's Charlie Harris!</li>
+					<li>Oh, he's really cute but looks like he is super young. What is he like 21?</li>
+					<li>3) I heard he left the seminary...
+					<li>4) I wonder if he remembers me.</li>
+			  </ol>
+			  At one point during the party, Charlie and Nina began chatting on the back porch about how they had similar backgrounds in discerning their vocation.
+			</p>
+		</div>
+	</div>
+</div>
 
 
       </div>
+    </div>
   </section>
 
 
 
   <section id="party">
-    <h1 class="section-header">Wedding Party</h1>
+    <div class="wrapper">
+      <h1 class="section-header">Wedding Party</h1>
       <div class="section-body">
 
         <p>
@@ -118,9 +183,7 @@
   <ul class="party-members">
       
       <li class="party-card" id="Jenny">
-        <div class="front">
-          <img src="/assets/jenny.jpg"/>
-        </div>
+        <div class="front" style="background-image: url(/assets/jenny.jpg)"></div>
         <div class="back">
           <div class="bridesmaid-name">Jenny</div>
           <div class="bridesmaid-blurb"></div>
@@ -129,9 +192,7 @@
 
       
       <li class="party-card" id="Jane">
-        <div class="front">
-          <img src="/assets/jane.jpg"/>
-        </div>
+        <div class="front" style="background-image: url(/assets/jane.jpg)"></div>
         <div class="back">
           <div class="bridesmaid-name">Jane</div>
           <div class="bridesmaid-blurb"></div>
@@ -140,9 +201,7 @@
 
       
       <li class="party-card" id="Courtney">
-        <div class="front">
-          <img src="/assets/courtney.jpg"/>
-        </div>
+        <div class="front" style="background-image: url(/assets/courtney.jpg)"></div>
         <div class="back">
           <div class="bridesmaid-name">Courtney</div>
           <div class="bridesmaid-blurb"></div>
@@ -151,9 +210,7 @@
 
       
       <li class="party-card" id="Ann">
-        <div class="front">
-          <img src="/assets/anne.jpg"/>
-        </div>
+        <div class="front" style="background-image: url(/assets/anne.jpg)"></div>
         <div class="back">
           <div class="bridesmaid-name">Ann</div>
           <div class="bridesmaid-blurb"></div>
@@ -162,9 +219,7 @@
 
       
       <li class="party-card" id="Monica">
-        <div class="front">
-          <img src="/assets/monica.jpg"/>
-        </div>
+        <div class="front" style="background-image: url(/assets/monica.jpg)"></div>
         <div class="back">
           <div class="bridesmaid-name">Monica</div>
           <div class="bridesmaid-blurb"></div>
@@ -173,9 +228,7 @@
 
       
       <li class="party-card" id="Maddie">
-        <div class="front">
-          <img src="/assets/maddie.jpg"/>
-        </div>
+        <div class="front" style="background-image: url(/assets/maddie.jpg)"></div>
         <div class="back">
           <div class="bridesmaid-name">Maddie</div>
           <div class="bridesmaid-blurb"></div>
@@ -184,9 +237,7 @@
 
       
       <li class="party-card" id="Rebecca">
-        <div class="front">
-          <img src="/assets/rebecca.jpg"/>
-        </div>
+        <div class="front" style="background-image: url(/assets/rebecca.jpg)"></div>
         <div class="back">
           <div class="bridesmaid-name">Rebecca</div>
           <div class="bridesmaid-blurb"></div>
@@ -195,9 +246,7 @@
 
       
       <li class="party-card" id="Andi">
-        <div class="front">
-          <img src="/assets/andi.jpg"/>
-        </div>
+        <div class="front" style="background-image: url(/assets/andi.jpg)"></div>
         <div class="back">
           <div class="bridesmaid-name">Andi</div>
           <div class="bridesmaid-blurb"></div>
@@ -213,9 +262,7 @@
  <ul class="party-members">
    
    <li class="party-card" id="Bill">
-     <div class="front">
-       <img src="/assets/"/>
-     </div>
+     <div class="front" style="background-image: url(/assets/)"></div>
      <div class="back">
        <div class="groomsman-name">Bill</div>
        <div class="groomsman-blurb"></div>
@@ -224,9 +271,7 @@
 
    
    <li class="party-card" id="George">
-     <div class="front">
-       <img src="/assets/"/>
-     </div>
+     <div class="front" style="background-image: url(/assets/)"></div>
      <div class="back">
        <div class="groomsman-name">George</div>
        <div class="groomsman-blurb"></div>
@@ -235,9 +280,7 @@
 
    
    <li class="party-card" id="Eddie">
-     <div class="front">
-       <img src="/assets/"/>
-     </div>
+     <div class="front" style="background-image: url(/assets/)"></div>
      <div class="back">
        <div class="groomsman-name">Eddie</div>
        <div class="groomsman-blurb"></div>
@@ -246,9 +289,7 @@
 
    
    <li class="party-card" id="Will">
-     <div class="front">
-       <img src="/assets/will.jpg"/>
-     </div>
+     <div class="front" style="background-image: url(/assets/will.jpg)"></div>
      <div class="back">
        <div class="groomsman-name">Will</div>
        <div class="groomsman-blurb"></div>
@@ -257,9 +298,7 @@
 
    
    <li class="party-card" id="Patrick">
-     <div class="front">
-       <img src="/assets/patrick.jpg"/>
-     </div>
+     <div class="front" style="background-image: url(/assets/patrick.jpg)"></div>
      <div class="back">
        <div class="groomsman-name">Patrick</div>
        <div class="groomsman-blurb"></div>
@@ -268,9 +307,7 @@
 
    
    <li class="party-card" id="Tyler">
-     <div class="front">
-       <img src="/assets/"/>
-     </div>
+     <div class="front" style="background-image: url(/assets/)"></div>
      <div class="back">
        <div class="groomsman-name">Tyler</div>
        <div class="groomsman-blurb"></div>
@@ -279,9 +316,7 @@
 
    
    <li class="party-card" id="Matt">
-     <div class="front">
-       <img src="/assets/"/>
-     </div>
+     <div class="front" style="background-image: url(/assets/)"></div>
      <div class="back">
        <div class="groomsman-name">Matt</div>
        <div class="groomsman-blurb"></div>
@@ -290,9 +325,7 @@
 
    
    <li class="party-card" id="Andy">
-     <div class="front">
-       <img src="/assets/"/>
-     </div>
+     <div class="front" style="background-image: url(/assets/)"></div>
      <div class="back">
        <div class="groomsman-name">Andy</div>
        <div class="groomsman-blurb"></div>
@@ -306,45 +339,53 @@
 
 
       </div>
+    </div>
   </section>
 
 
 
   <section id="ceremony">
-    <h1 class="section-header">Ceremony</h1>
+    <div class="wrapper">
+      <h1 class="section-header">Ceremony</h1>
       <div class="section-body">
 
         
 
       </div>
+    </div>
   </section>
 
 
 
   <section id="reception">
-    <h1 class="section-header">Reception</h1>
+    <div class="wrapper">
+      <h1 class="section-header">Reception</h1>
       <div class="section-body">
 
         
 
       </div>
+    </div>
   </section>
 
 
 
   <section id="hotel">
-    <h1 class="section-header">Accomodations</h1>
+    <div class="wrapper">
+      <h1 class="section-header">Accomodations</h1>
       <div class="section-body">
 
         
 
       </div>
+    </div>
   </section>
 
 
 
   <section id="registry">
-    <h1 class="section-header">Registry</h1>
+    <div class="wrapper">
+      <h1 class="section-header">Registry</h1>
       <div class="section-body">
 
         <a id="macys" href="http://www1.macys.com/registry/wedding/guest/?registryId=2273651" class="svg-holder" target="_blank">
@@ -552,17 +593,20 @@
 
 
       </div>
+    </div>
   </section>
 
 
 
   <section id="photos">
-    <h1 class="section-header">Photos</h1>
+    <div class="wrapper">
+      <h1 class="section-header">Photos</h1>
       <div class="section-body">
 
         
 
       </div>
+    </div>
   </section>
 
 
