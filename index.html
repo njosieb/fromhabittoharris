@@ -2,7 +2,7 @@
 layout: home
 ---
 
-<section id="top" style="background-image: url({{site.baseurl}}/assets/stpats.jpg);">
+<section id="top-section" style="background-image: url({{site.baseurl}}/assets/stpats.jpg);">
   <div class="left-box">
     <h1>Nina</h1>
     <h6>&</h6>
@@ -14,12 +14,14 @@ layout: home
 {% for section in site.data.sections %}
 
   <section id="{{section.id}}">
-    <h1 class="section-header">{{section.title}}</h1>
+    <div class="wrapper">
+      <h1 class="section-header">{{section.title}}</h1>
       <div class="section-body">
 
         {% include_relative _sections/{{section.id}}.html %}
 
       </div>
+    </div>
   </section>
 
 {% endfor %}

@@ -1,0 +1,108 @@
+#about-us {
+  .section-header {
+    color: #fff;
+  }
+}
+
+#selection-container {
+  @include flex-display();
+  @include justify-content(space-around);
+  @include flex-wrap(wrap);
+}
+
+.selection-holder {
+  @include flex(0, 0, 31%);
+  @include flex-display();
+  @include justify-content(center);
+}
+
+.selection-box {
+  @include flex-display();
+  @include align-items(center);
+  @include justify-content(center);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  background-color: $blue-primary;
+  margin-top: 2em;
+  padding: 1em;
+  border: 2px solid $blue-primary;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  transition-property: background-color, border-color;
+  transition-duration: .3s;
+
+  .selection-text {
+    font-family: $splash-font;
+    font-size: 1.8em;
+    color: white;
+    text-align: center;
+    margin: 0;
+    transition: color .3s;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border-color: $red-color;
+
+    .selection-text {
+      color: transparent;
+    }
+  }
+}
+
+#select-her {
+  @include flex(0, 0, 46%);
+  @include justify-content(flex-end);
+}
+
+#select-him {
+  @include flex(0, 0, 46%);
+  @include justify-content(flex-start);
+}
+
+#story-viewer {
+  position: absolute;
+  top: 0;
+  background: $grey-dark;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#story-controls {
+  @include flex-display();
+  @include justify-content(space-between);
+
+  .button-text {
+    color: white;
+    font-family: $base-font-family;
+  }
+}
+
+#story-container {
+  position: relative;
+}
+
+.story {
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+}
+
+.story-header {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: $splash-font;
+  color: white;
+}
+
+.story-subheader {
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-family: $base-font-family;
+  font-size: 1.4em;
+}

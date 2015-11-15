@@ -1,0 +1,52 @@
+#registry {
+
+  .section-body {
+    padding: 80px 0 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.svg-holder {
+  @include flex(1, 0, 33%);
+  position: relative;
+  padding: 0 20px;
+  display: block;
+  cursor: pointer;
+
+  svg {
+    height: 100%;
+    width: 100%;
+
+    path {
+      transition: fill .6s;
+    }
+
+  }
+  svg:not(:hover) path {
+    fill: $grey-color !important;
+  }
+}
+
+.registry-link-holder {
+  flex: 1 0 33%;
+  position: relative;
+  padding: 0 20px;
+
+  .registry-link {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: grey;
+    background-blend-mode: multiply;
+    transition: background-color .6s;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
