@@ -236,6 +236,7 @@ main {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  background-color: lightgray; }
   background-color: #323a45; }
   @media screen and (max-width: 600px) {
     #page-body {
