@@ -561,6 +561,9 @@ ul.party-members {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  #story-controls .control-button {
+    padding: .75em;
+    cursor: pointer; }
   #story-controls .button-text {
     color: white;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
@@ -571,7 +574,8 @@ ul.party-members {
 .story {
   position: absolute;
   width: 100%;
-  overflow: auto; }
+  overflow: auto;
+  display: none; }
 
 .story-header {
   text-align: center;
