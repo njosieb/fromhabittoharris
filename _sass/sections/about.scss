@@ -1,6 +1,6 @@
 #about-us {
   .section-header {
-    color: #fff;
+    // color: #fff;
   }
 }
 
@@ -52,12 +52,12 @@
   }
 }
 
-#select-her {
+#select-about-her {
   @include flex(0, 0, 46%);
   @include justify-content(flex-end);
 }
 
-#select-him {
+#select-about-him {
   @include flex(0, 0, 46%);
   @include justify-content(flex-start);
 }
@@ -65,11 +65,11 @@
 #story-viewer {
   position: absolute;
   top: 0;
-  background: $grey-dark;
   height: 100%;
   width: 100%;
   opacity: 0;
   visibility: hidden;
+  overflow: hidden; // enable scroll within stories
 }
 
 #story-controls {
@@ -79,6 +79,7 @@
   .control-button {
     padding: .75em;
     cursor: pointer;
+    font-size: 1.2em;
   }
 
   .button-text {
@@ -88,14 +89,24 @@
 }
 
 #story-container {
+  height: calc(100% - 57px);
+  overflow: auto; // enable scroll within stories
   position: relative;
 }
 
 .story {
   position: absolute;
   width: 100%;
-  overflow: auto;
   display: none;
+
+  p {
+    color: white;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    text-indent: 2em;
+    margin-bottom: 2em;
+    font-weight: 200;
+  }
 }
 
 .story-header {
@@ -103,6 +114,7 @@
   font-size: 2.5em;
   font-family: $splash-font;
   color: white;
+  padding-bottom: 1em;
 }
 
 .story-subheader {

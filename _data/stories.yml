@@ -1,0 +1,30 @@
+---
+- title: "About Her"
+  subtitle: ""
+  index: 0
+  image: "nina.jpg"
+  partial: "about-her"
+
+- title: "About Him"
+  subtitle: ""
+  index: 0
+  image: "charlie.jpg"
+  partial: "about-him"
+
+- title: "How We Met"
+  subtitle: ""
+  index: 0
+  image: "barlouie.jpg"
+  partial: "how-met"
+
+- title: "Dating Sucks"
+  subtitle: "(but not this time!)"
+  index: 0
+  image: "jamestaylor.jpg"
+  partial: "dating"
+
+- title: "Popping the Question"
+  subtitle: ""
+  index: 0
+  image: "engaged.jpg"
+  partial: "engaged"

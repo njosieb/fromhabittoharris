@@ -1,16 +1,16 @@
 (function($) {
   $(document).ready(function() {
-    var selectHer = $('#select-her'),
-        selectHim = $('#select-him'),
-        selectMet = $('#select-met'),
+    var selectHer = $('#select-about-her'),
+        selectHim = $('#select-about-him'),
+        selectMet = $('#select-how-met'),
         selectDating = $('#select-dating'),
-        selectProposal = $('#select-proposal'),
+        selectProposal = $('#select-engaged'),
         selectBlockIds = [selectHer, selectHim, selectMet, selectDating, selectProposal],
         selectBlocks = $('.selection-holder'),
         storySelection = $('#story-selection'),
         storyViewer = $('#story-viewer'),
-        backButton = $('#back-text'),
-        nextButton = $('#next-story-button'),
+        backButton = $('.back-button'),
+        nextButton = $('.next-story-button'),
         storyHer = $('#story-about-her'),
         storyHim = $('#story-about-him'),
         storyMet = $('#story-how-met'),
@@ -19,14 +19,27 @@
         storyIds = [storyHer, storyHim, storyMet, storyDating, storyEngaged],
         stories = $('.story');
 
-    backButton.click(function(e) {
-      cleanupStoryView();
+    backButton.each(function() {
+      $(this).click(function(e) {
+        cleanupStoryView();
+      });
+    });
+
+    nextButton.each(function() {
+      $(this).click(function(e) {
+        var currentStory = e;
+        changeStory()
+      });
     });
 
     var hideStories = function() {
       stories.each(function() {
         $(this).hide();
       })
+    }
+
+    var changeStory = function(currentStory) {
+
     }
 
     var setupStoryView = function() {

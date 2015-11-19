@@ -107,7 +107,7 @@ main {
   transition: transform 0.5s;
   @include flex-display();
   @include flex-direction(column);
-  background-color: $grey-dark;
+  background-color: $background-swatch;
 
   @include media-query($on-palm) {
     overflow-y: scroll;
@@ -133,6 +133,16 @@ aside {
 
 section {
   position: relative;
+  padding-bottom: 5em;
+
+  &:nth-child(even) {
+    background-color: $blue-darker;
+    color: white;
+  }
+
+  > .wrapper {
+    padding-bottom: 5em;
+  }
 
 	.section-header {
 		text-align: center;
