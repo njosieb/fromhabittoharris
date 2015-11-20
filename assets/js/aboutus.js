@@ -27,8 +27,7 @@
 
     nextButton.each(function() {
       $(this).click(function(e) {
-        var currentStory = e;
-        changeStory()
+        changeStory(e.target);
       });
     });
 
@@ -38,8 +37,9 @@
       })
     }
 
-    var changeStory = function(currentStory) {
-
+    var changeStory = function(clickTarget) {
+      var currentStoryId =  $(clickTarget).parents('.story').attr('id');
+      pickNextStory(currentStoryId);
     }
 
     var setupStoryView = function() {
@@ -51,6 +51,20 @@
     var cleanupStoryView = function() {
       storySelection.css({'visibility': 'visible'});
       storyViewer.css({'visibility': 'hidden', 'opacity': 0});
+    }
+
+    var pickNextStory = function(currentStory) {
+      for (var i = 0; i < storyIds.length; i++) {
+        if (storyIds[i].attr('id') === currentStory) {
+          if (i == storyIds.length - 1) {
+            // last story
+            cleanupStoryView();
+          } else {
+            hideStories();
+            storyIds[i + 1].show();
+          }
+        }
+      }
     }
 
     $.each(selectBlockIds, function(i, block) {
