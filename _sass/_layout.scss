@@ -140,6 +140,10 @@ section {
     color: white;
   }
 
+  &:nth-child(odd) .section-header {
+    color: $blue-primary;
+  }
+
   > .wrapper {
     padding-bottom: 5em;
   }
