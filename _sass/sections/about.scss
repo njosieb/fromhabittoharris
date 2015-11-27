@@ -11,7 +11,7 @@
 }
 
 .selection-holder {
-  @include flex(0, 0, 31%);
+  @include flex(0, 0, 25%);
   @include flex-display();
   @include justify-content(center);
 }

@@ -5,7 +5,8 @@
         selectMet = $('#select-how-met'),
         selectDating = $('#select-dating'),
         selectProposal = $('#select-engaged'),
-        selectBlockIds = [selectHer, selectHim, selectMet, selectDating, selectProposal],
+        selectRing = $('#select-ring'),
+        selectBlockIds = [selectHer, selectHim, selectMet, selectDating, selectProposal, selectRing],
         selectBlocks = $('.selection-holder'),
         storySelection = $('#story-selection'),
         storyViewer = $('#story-viewer'),
@@ -16,13 +17,15 @@
         storyMet = $('#story-how-met'),
         storyDating = $('#story-dating'),
         storyEngaged = $('#story-engaged'),
-        storyIds = [storyHer, storyHim, storyMet, storyDating, storyEngaged],
+        storyRing = $('#story-ring'),
+        storyIds = [storyHer, storyHim, storyMet, storyDating, storyEngaged, storyRing],
         sectionHeader = $('#about-us .section-header'),
         scrollHer = $('#about-her-scroll'),
         scrollHim = $('#about-him-scroll'),
         scrollMet = $('#how-met-scroll'),
         scrollDating = $('#dating-scroll'),
         scrollProposal = $('#engaged-scroll'),
+        scrollRing = $('#ring-scroll'),
         stories = $('.story');
 
     backButton.each(function() {

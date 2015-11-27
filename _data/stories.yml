@@ -7,25 +7,32 @@
 
 - title: "About Him"
   subtitle: ""
-  index: 0
+  index: 1
   image: "charlie.jpg"
   partial: "about-him"
 
 - title: "How We Met"
   subtitle: ""
-  index: 0
+  index: 2
   image: "barlouie.jpg"
   partial: "how-met"
 
 - title: "Dating"
   alt: "Dating Sucks"
   subtitle: "(but not this time!)"
-  index: 0
+  index: 3
   image: "jamestaylor.jpg"
   partial: "dating"
 
 - title: "Popping the Question"
   subtitle: ""
-  index: 0
+  index: 4
   image: "engaged.jpg"
   partial: "engaged"
+
+- title: "About the Ring"
+  subtitle: ""
+  index: 5
+  image: "thering.jpg"
+  partial: "ring"
+
