@@ -1,48 +1,48 @@
 ---
 - name: Jenny
   photo: "jenny.jpg"
-  relation:
-  hashtag:
+  relation: "Cousin / Sister"
+  hashtag: "SEESTER"
   funnyThing:
 
 - name: Jane
   photo: "jane.jpg"
-  relation:
-  hashtag:
+  relation: "High School Best Friend"
+  hashtag: "SuperMom"
   funnyThing:
 
 - name: Courtney
   photo: "courtney.jpg"
-  relation:
-  hashtag:
+  relation: "Friend"
+  hashtag: "QueenOfKareoke"
   funnyThing:
 
 - name: Ann
   photo: "anne.jpg"
-  relation:
-  hashtag:
+  relation: Cousin
+  hashtag: "GetYourHairDid"
   funnyThing:
 
 - name: Monica
   photo: "monica.jpg"
-  relation:
-  hashtag:
+  relation: "Friend"
+  hashtag: "AntiMovieCommentary"
   funnyThing:
 
 - name: Maddie
   photo: "maddie.jpg"
-  relation:
-  hashtag:
+  relation: "Future Sister"
+  hashtag: "TooCoolForSchool"
   funnyThing:
 
 - name: Rebecca
   photo: "rebecca.jpg"
-  relation:
-  hashtag:
+  relation: "Friend from Rome"
+  hashtag: "CiaoBella"
   funnyThing:
 
 - name: Andi
   photo: "andi.jpg"
-  relation:
-  hashtag:
+  relation: "Former Neighbor"
+  hashtag: "WatchHerWhip"
   funnyThing:
