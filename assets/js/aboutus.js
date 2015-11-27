@@ -17,6 +17,12 @@
         storyDating = $('#story-dating'),
         storyEngaged = $('#story-engaged'),
         storyIds = [storyHer, storyHim, storyMet, storyDating, storyEngaged],
+        sectionHeader = $('#about-us .section-header'),
+        scrollHer = $('#about-her-scroll'),
+        scrollHim = $('#about-him-scroll'),
+        scrollMet = $('#how-met-scroll'),
+        scrollDating = $('#dating-scroll'),
+        scrollProposal = $('#engaged-scroll'),
         stories = $('.story');
 
     backButton.each(function() {
@@ -44,12 +50,14 @@
 
     var setupStoryView = function() {
       storySelection.css({'visibility': 'hidden'});
+      sectionHeader.css({'visibility': 'hidden', 'opacity': 0});
       storyViewer.css({'visibility': 'visible', 'opacity': 1});
       hideStories();
     }
 
     var cleanupStoryView = function() {
       storySelection.css({'visibility': 'visible'});
+      sectionHeader.css({'visibility': 'visible', 'opacity': 1});
       storyViewer.css({'visibility': 'hidden', 'opacity': 0});
     }
 
@@ -65,6 +73,10 @@
           }
         }
       }
+    }
+
+    var canScroll = function(el) {
+      (elt).innerWidth() > elt[0].scrollWidth;
     }
 
     $.each(selectBlockIds, function(i, block) {

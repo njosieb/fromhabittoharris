@@ -17,7 +17,8 @@
   image: "barlouie.jpg"
   partial: "how-met"
 
-- title: "Dating Sucks"
+- title: "Dating"
+  alt: "Dating Sucks"
   subtitle: "(but not this time!)"
   index: 0
   image: "jamestaylor.jpg"

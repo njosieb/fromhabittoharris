@@ -16,10 +16,10 @@
 
 		{% for story in site.data.stories %}
 		<div id="story-{{story.partial}}" class="story">
-			<h2 class="story-header">{{story.title}}</h2>
-			{% if page.title %}<h4 class="story-subheader">{{story.subtitle}}</h4>{% endif %}
+			<h2 class="story-header">{% if story.alt %}{{story.alt}}{% else %}{{story.title}}{% endif %}</h2>
+			{% if story.subtitle %}<h4 class="story-subheader">{{story.subtitle}}</h4>{% endif %}
 
-			<div class="story-body">
+			<div class="story-body" id="{{story.partial}}-scroll">
 				{% include_relative _sections/partials/{{story.partial}}.html %}
 			</div>
 

@@ -1,32 +1,48 @@
 ---
 - name: Jenny
   photo: "jenny.jpg"
-  blurb: "hi there"
+  relation:
+  hashtag:
+  funnyThing:
 
 - name: Jane
   photo: "jane.jpg"
-  blurb:
+  relation:
+  hashtag:
+  funnyThing:
 
 - name: Courtney
   photo: "courtney.jpg"
-  blurb:
+  relation:
+  hashtag:
+  funnyThing:
 
 - name: Ann
   photo: "anne.jpg"
-  blurb:
+  relation:
+  hashtag:
+  funnyThing:
 
 - name: Monica
   photo: "monica.jpg"
-  blurb:
+  relation:
+  hashtag:
+  funnyThing:
 
 - name: Maddie
   photo: "maddie.jpg"
-  blurb:
+  relation:
+  hashtag:
+  funnyThing:
 
 - name: Rebecca
   photo: "rebecca.jpg"
-  blurb:
+  relation:
+  hashtag:
+  funnyThing:
 
 - name: Andi
   photo: "andi.jpg"
-  blurb:
+  relation:
+  hashtag:
+  funnyThing:
