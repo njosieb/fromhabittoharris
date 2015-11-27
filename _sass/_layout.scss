@@ -11,7 +11,7 @@ header {
   top: 0;
   width: 100%;
   left: 0;
-  border-top: 4px solid $red-color;
+  border-bottom: 4px solid $red-color;
   background-color: $blue-primary;
   z-index: 10;
   overflow: hidden;
@@ -21,6 +21,7 @@ header {
   transition: transform .3s;
   -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
   backface-visibility: hidden;
+  box-shadow: 0 3px 15px 0px #3e3e3e;
 
   .wrapper {
     @include flex-display();
@@ -73,7 +74,6 @@ header {
 /**
  * Content Layout
  */
-
 main {
   -webkit-perspective: 1500px;
   perspective: 1500px;
@@ -136,7 +136,7 @@ section {
   padding-bottom: 5em;
 
   &:nth-child(even) {
-    background-color: $blue-darker;
+    background-color: $blue-primary;
     color: white;
   }
 

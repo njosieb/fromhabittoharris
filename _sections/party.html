@@ -4,34 +4,39 @@
   Nina and Charlie are so excited to have these amazing relatives and friends stand by their side on their wedding day!</p>
 <div class="party-container">
   <div id="bridesmaids">
-      <h3>Bridesmaids</h3>
-  <ul class="party-members">
+    <h3>Bridesmaids</h3>
+    <div class="party-members">
       {% for bridesmaid in site.data.bridesmaids %}
-      <li class="party-card" id="{{bridesmaid.name}}">
-        <div class="front" style="background-image: url(/assets/{{bridesmaid.photo}})"></div>
-        <div class="back">
-          <div class="bridesmaid-name">{{bridesmaid.name}}</div>
-          <div class="bridesmaid-blurb">{{bridesmaid.blurg}}</div>
+      <div class="party-card" id="{{bridesmaid.name}}">
+        <div class="card-wrapper">
+          <div class="picture" style="background-image: url(/assets/{{bridesmaid.photo}})"></div>
+          <h4 class="party-member-name">{{bridesmaid.name}}</h4>
+          <div class="party-member-info">
+            <h5 class="party-member-relation">{{bridesmaid.relation}}</h5>
+            <div class="party-member-hashtag"><i class="fa fa-hashtag"></i>{{bridesmaid.hashtag}}</div>
+            <div class="party-member-thing">{{bridesmaid.funnyThing}}</div>
+          </div>
         </div>
-        </li>
-
+      </div>
       {% endfor %}
-  </ul>
-</div>
+    </div>
+  </div>
 
 <div id="groomsmen">
-    <h3>Groomsmen</h3>
- <ul class="party-members">
-   {% for groomsman in site.data.groomsmen %}
-   <li class="party-card" id="{{groomsman.name}}">
-     <div class="front" style="background-image: url(/assets/{{groomsman.photo}})"></div>
-     <div class="back">
-       <div class="groomsman-name">{{groomsman.name}}</div>
-       <div class="groomsman-blurb">{{groomsman.blurg}}</div>
-     </div>
-     </li>
-
-   {% endfor %}
- </ul>
-</div>
+  <h3>Groomsmen</h3>
+  <div class="party-members">
+    {% for groomsman in site.data.groomsmen %}
+    <div class="party-card" id="{{groomsman.name}}">
+      <div class="card-wrapper">
+        <div class="picture" style="background-image: url(/assets/{{groomsman.photo}})"></div>
+        <h4 class="party-member-name">{{groomsman.name}}</h4>
+        <div class="party-member-info">
+          <h5 class="party-member-relation">{{groomsman.relation}}</h5>
+          <div class="party-member-hashtag"><i class="fa fa-hashtag"></i>{{groomsman.hashtag}}</div>
+          <div class="party-member-thing">{{groomsman.funnyThing}}</div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </div>

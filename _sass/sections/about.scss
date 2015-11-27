@@ -22,11 +22,11 @@
   @include justify-content(center);
   background-size: cover;
   background-repeat: no-repeat;
-  background-blend-mode: lighten;
-  background-color: $blue-primary;
+  background-blend-mode: luminosity;
+  background-color: $blue-darker;
   margin-top: 2em;
   padding: 1em;
-  border: 2px solid $blue-primary;
+  border: 5px solid $blue-primary;
   cursor: pointer;
   height: 200px;
   width: 200px;
@@ -89,23 +89,70 @@
 }
 
 #story-container {
-  height: calc(100% - 57px);
-  overflow: auto; // enable scroll within stories
-  position: relative;
+  @include stick-overflow();
 }
 
 .story {
   position: absolute;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
   display: none;
+}
+
+.story-body {
+  height: calc(100% - 93px - 57px);
+  overflow-y: hidden;
+  overflow-x: scroll;
+  position: relative;
+  padding-top: 1em;
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  -webkit-column-gap: 6em;
+  -moz-column-gap: 6em;
+  column-gap: 6em;
+
+  blockquote {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+  }
+
+  blockquote p {
+    text-indent: -1.5em;
+    margin-left: 1.5em;
+
+    i {
+      font-style: normal;
+      font-weight: 900;
+    }
+  }
 
   p {
     color: white;
     font-size: 1.4em;
     line-height: 1.5em;
-    text-indent: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 0;
     font-weight: 200;
+  }
+
+  > p {
+    margin-top: 1.5em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:first-letter {
+      float: left;
+      font-size: 3.0em;
+      line-height: 0.7em;
+      padding-top: 5px;
+      padding-right: 12px;
+      padding-left: 8px;
+      font-family: $fancy-font;
+      font-style: italic;
+    }
   }
 }
 
@@ -114,7 +161,6 @@
   font-size: 2.5em;
   font-family: $splash-font;
   color: white;
-  padding-bottom: 1em;
 }
 
 .story-subheader {

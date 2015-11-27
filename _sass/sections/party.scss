@@ -1,0 +1,98 @@
+h3 {
+  font-size: 40px;
+  margin-left: auto;
+}
+
+.party-container{
+	@include flex-display();
+	@include justify-content(space-around);
+}
+
+.party-card .picture {
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.party-container .party-members {
+  @include flex-display();
+  @include flex-wrap(wrap);
+}
+
+.party-card {
+  @include flex-basis(50%);
+  @include flex-display();
+  @include justify-content(center);
+  margin-top: 1.5em;
+  position: relative;
+  list-style-type: none;
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.picture {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.party-member-name {
+  text-align: center;
+  font-family: $splash-font;
+  font-size: 2em;
+  color: $blue-primary;
+}
+
+#Bill, #Jenny, #Andi {
+  flex-basis: 100%;
+}
+
+#Bill {
+  @include justify-content(flex-start);
+
+  .card-wrapper {
+    left: 5px;
+  }
+}
+
+#Jenny, #Andi {
+  @include justify-content(flex-end);
+
+  .card-wrapper {
+    right: 5px;
+  }
+}
+
+#groomsmen {
+  margin-left: 10px;
+  margin-right: -10px;
+}
+
+#bridesmaids {
+  margin-right: 10px;
+  margin-left: -10px;
+
+  h3 {
+    text-align: right;
+  }
+}
+
+.party-member-info {
+  text-align: center;
+}
+
+.party-member-hashtag {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.party-member-relation {
+  font-weight: 600;
+  font-size: 1em;
+}

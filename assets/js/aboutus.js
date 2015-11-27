@@ -17,6 +17,12 @@
         storyDating = $('#story-dating'),
         storyEngaged = $('#story-engaged'),
         storyIds = [storyHer, storyHim, storyMet, storyDating, storyEngaged],
+        sectionHeader = $('#about-us .section-header'),
+        scrollHer = $('#about-her-scroll'),
+        scrollHim = $('#about-him-scroll'),
+        scrollMet = $('#how-met-scroll'),
+        scrollDating = $('#dating-scroll'),
+        scrollProposal = $('#engaged-scroll'),
         stories = $('.story');
 
     backButton.each(function() {
@@ -27,8 +33,7 @@
 
     nextButton.each(function() {
       $(this).click(function(e) {
-        var currentStory = e;
-        changeStory()
+        changeStory(e.target);
       });
     });
 
@@ -38,19 +43,40 @@
       })
     }
 
-    var changeStory = function(currentStory) {
-
+    var changeStory = function(clickTarget) {
+      var currentStoryId =  $(clickTarget).parents('.story').attr('id');
+      pickNextStory(currentStoryId);
     }
 
     var setupStoryView = function() {
       storySelection.css({'visibility': 'hidden'});
+      sectionHeader.css({'visibility': 'hidden', 'opacity': 0});
       storyViewer.css({'visibility': 'visible', 'opacity': 1});
       hideStories();
     }
 
     var cleanupStoryView = function() {
       storySelection.css({'visibility': 'visible'});
+      sectionHeader.css({'visibility': 'visible', 'opacity': 1});
       storyViewer.css({'visibility': 'hidden', 'opacity': 0});
+    }
+
+    var pickNextStory = function(currentStory) {
+      for (var i = 0; i < storyIds.length; i++) {
+        if (storyIds[i].attr('id') === currentStory) {
+          if (i == storyIds.length - 1) {
+            // last story
+            cleanupStoryView();
+          } else {
+            hideStories();
+            storyIds[i + 1].show();
+          }
+        }
+      }
+    }
+
+    var canScroll = function(el) {
+      (elt).innerWidth() > elt[0].scrollWidth;
     }
 
     $.each(selectBlockIds, function(i, block) {

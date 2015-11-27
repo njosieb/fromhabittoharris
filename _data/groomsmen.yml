@@ -1,32 +1,48 @@
 ---
 - name: Bill
-  photo:
-  blurb:
+  photo: "bill.jpg"
+  relation: "2nd Cousin, Twice Removed"
+  hashtag: "princecharming"
+  funnyThing: "He farts a lot"
 
 - name: George
-  photo:
-  blurb:
+  photo: "george.jpg"
+  relation: "Brother"
+  hashtag:
+  funnyThing:
 
 - name: Eddie
-  photo:
-  blurb:
+  photo: "eddie.jpg"
+  relation: "Brother"
+  hashtag:
+  funnyThing:
 
 - name: Will
   photo: "will.jpg"
-  blurb:
+  relation: "Brother"
+  hashtag:
+  funnyThing:
 
 - name: Patrick
   photo: "patrick.jpg"
-  blurb:
+  relation: "Friend"
+  hashtag:
+  funnyThing:
 
 - name: Tyler
-  photo:
-  blurb:
+  photo: "tyler.jpg"
+  relation: "Friend"
+  hashtag:
+  funnyThing:
 
 - name: Matt
-  photo:
-  blurb:
+  photo: "matt.jpg"
+  relation: "Friend"
+  hashtag:
+  funnyThing:
 
 - name: Andy
-  photo:
-  blurb:
+  photo: "andy.jpg"
+  relation: "Brother of Bride"
+  hashtag:
+  funnyThing:
