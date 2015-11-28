@@ -20,7 +20,7 @@
 - name: Will
   photo: "will.jpg"
   relation: "Brother"
-  hashtag:
+  hashtag: 
   funnyThing:
 
 - name: Patrick
@@ -44,5 +44,5 @@
 - name: Andy
   photo: "andy.jpg"
   relation: "Brother of Bride"
-  hashtag:
+  hashtag: "AndyMan"
   funnyThing:
