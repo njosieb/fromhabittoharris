@@ -5,8 +5,9 @@
   <div id="photo-gallery" class="photos-wrapper">
     {% for file in site.static_files %}
       {% if file.path contains '/assets/photos/' %}
+      {% assign photoId = file.path | remove:'/assets/photos/' | remove:'.jpg' %}
       <a href="{{file.path}}" class="photo">
-        <img src="{{file.path}}" alt="" />
+        <img id="{{photoId}}" src="{{file.path}}" alt="" />
       </a>
       {% endif %}
     {% endfor %}

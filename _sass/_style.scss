@@ -138,6 +138,7 @@
 
   img {
     max-height: 250px;
+    width: 100%;
     object-fit: cover;
   }
 }
@@ -146,6 +147,11 @@
   .photo & {
     background-color: rgba($blue-primary, 0.85);
   }
+}
+
+.fluidbox__wrap {
+  display: flex;
+  justify-content: center;
 }
 
 .section-link {
@@ -222,4 +228,61 @@ footer.site-footer {
       color: $red-color;
     }
   }
+}
+
+
+/**
+ * Photo Gallery Image Positions
+ */
+
+img#engage-bw-showing-off-ring-1 {
+  object-position: center right;
+}
+
+img#engage-bw-showing-off-ring {
+  object-position: top;
+}
+
+img#engage-crampis1 {
+  object-position: 30%;
+}
+
+img#engage-crampis2 {
+  object-position: 22%;
+}
+
+img#engage-creek2 {
+  object-position: right;
+}
+
+img#engage-creek {
+  object-position: right;
+}
+
+img#engage-kissmuseum {
+  object-position: right;
+}
+
+img#engage-reflection-1 {
+  object-position: 66%;
+}
+
+img#engage-reflection-3 {
+  object-position: 80%;
+}
+
+img#engage-sitting-in-creek {
+  object-position: right;
+}
+
+img#engage-standingonlog {
+  object-position: 22%;
+}
+
+img#engage-walking {
+  object-position: 75%;
+}
+
+img#engage-leap {
+  object-position: 90%;
 }

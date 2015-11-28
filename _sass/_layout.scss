@@ -138,6 +138,10 @@ section {
   &:nth-child(even) {
     background-color: $blue-primary;
     color: white;
+
+    a {
+      color: $blue-alt;
+    }
   }
 
   > .wrapper {
