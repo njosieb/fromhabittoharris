@@ -12,7 +12,7 @@ header {
   width: 100%;
   left: 0;
   border-bottom: 4px solid $red-color;
-  background-color: $blue-primary;
+  background-color: $blue-dark;
   z-index: 10;
   overflow: hidden;
   transform: translateY(0);
@@ -138,6 +138,10 @@ section {
   &:nth-child(even) {
     background-color: $blue-primary;
     color: white;
+
+    a {
+      color: $blue-alt;
+    }
   }
 
   &:nth-child(odd) .section-header {

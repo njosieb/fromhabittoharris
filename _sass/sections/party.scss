@@ -126,6 +126,7 @@ h3 {
 .party-member-thing {
   position: absolute;
   width: 100%;
+  max-width: 200px;
   background-color: $background-swatch;
   max-height: 0;
   overflow: hidden;

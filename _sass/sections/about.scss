@@ -11,7 +11,7 @@
 }
 
 .selection-holder {
-  @include flex(0, 0, 31%);
+  @include flex(0, 0, 25%);
   @include flex-display();
   @include justify-content(center);
 }
@@ -53,12 +53,12 @@
 }
 
 #select-about-her {
-  @include flex(0, 0, 46%);
+  @include flex(0, 0, 49%);
   @include justify-content(flex-end);
 }
 
 #select-about-him {
-  @include flex(0, 0, 46%);
+  @include flex(0, 0, 49%);
   @include justify-content(flex-start);
 }
 
@@ -69,7 +69,7 @@
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  overflow: hidden; // enable scroll within stories
+  overflow: visible;
 }
 
 #story-controls {
@@ -88,15 +88,24 @@
   }
 }
 
+.select-back {
+  padding-left: 0;
+}
+
+.select-next {
+  padding-right: 0;
+}
+
 #story-container {
   @include stick-overflow();
+  overflow: visible;
 }
 
 .story {
   position: absolute;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: visible;
   display: none;
 }
 
@@ -134,24 +143,27 @@
     line-height: 1.5em;
     margin-bottom: 0;
     font-weight: 200;
+    text-align: justify;
   }
 
   > p {
     margin-top: 1.5em;
+    text-indent: 2.5em;
 
     &:first-child {
       margin-top: 0;
-    }
+      text-indent: 0;
 
-    &:first-letter {
-      float: left;
-      font-size: 3.0em;
-      line-height: 0.7em;
-      padding-top: 5px;
-      padding-right: 12px;
-      padding-left: 8px;
-      font-family: $fancy-font;
-      font-style: italic;
+      &:first-letter {
+        float: left;
+        font-size: 3.0em;
+        line-height: 0.7em;
+        padding-top: 5px;
+        padding-right: 12px;
+        padding-left: 8px;
+        font-family: $fancy-font;
+        font-style: italic;
+      }
     }
   }
 }
@@ -169,4 +181,62 @@
   font-style: italic;
   font-family: $base-font-family;
   font-size: 1.4em;
+}
+
+.story-scroll-buttons {
+  @include flex-display();
+  @include justify-content(space-between);
+  @include align-items(center);
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 12em);
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  margin-left: -6em;
+  margin-right: -6em;
+}
+
+.scroll-control {
+  @include flex-display(flex);
+  @include align-items(center);
+  height: 5em;
+  width: 5em;
+  border-radius: 100%;
+  background: $blue-alt;
+  position: relative;
+  pointer-events: all;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .6s;
+  transition-property: background;
+
+  &:before {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    line-height: 5rem;
+    font-size: 5rem;
+    position: absolute;
+    color: $blue-alt-darker;
+    transition-duration: .6s;
+    transition-property: color;
+  }
+
+  &.scroll-right:before {
+    content: '\f0da';
+    left: 1.9rem;
+  }
+
+  &.scroll-left:before {
+    content: '\f0d9';
+    right: 1.9rem;
+  }
+
+  &:hover {
+    background: $blue-alt-darker;
+
+    &:before {
+      color: $blue-alt;
+    }
+  }
 }

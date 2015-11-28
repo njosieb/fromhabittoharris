@@ -3,7 +3,7 @@
 
 		{% for selection in site.data.stories %}
 		<div id="select-{{selection.partial}}" class="selection-holder">
-			<div class="selection-box" style="background-image: url({{site.baseurl}}/assets/{{selection.image}});">
+			<div class="selection-box" style="background-image: url({{site.baseurl}}/assets/about-us/{{selection.image}});">
 				<h3 class="selection-text">{{selection.title}}</h3>
 			</div>
 		</div>
@@ -21,6 +21,12 @@
 
 			<div class="story-body" id="{{story.partial}}-scroll">
 				{% include_relative _sections/partials/{{story.partial}}.html %}
+
+			</div>
+
+			<div class="story-scroll-buttons">
+				<div class="scroll-control scroll-left"></div>
+				<div class="scroll-control scroll-right"></div>
 			</div>
 
 			<div id="story-controls">
@@ -32,8 +38,13 @@
 				</div>
 				<div class="control-button select-next">
 					<span class="button-text next-story-button">
+						{% if forloop.index == (forloop.length - 1) %}
+						<i class="fa fa-hand-peace-o"></i>
+						End
+						{% else %}
 						<i class="fa fa-hand-o-right"></i>
 						Next
+						{% endif %}
 					</span>
 				</div>
 			</div>
