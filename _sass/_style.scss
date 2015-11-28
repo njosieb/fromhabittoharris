@@ -130,28 +130,37 @@
 }
 
 .photo {
-  @include flex(0, 0, 29%);
+  @include flex(0, 0, 32%);
   @include flex-display();
   @include justify-content(center);
-  margin: 1rem 2%;
+  padding: 0.8rem;
+  margin: 1rem 0;
   display: block;
+  background: $blue-alt;
+  border: 0.4rem solid $grey-warm;
 
   img {
     max-height: 250px;
-    width: 100%;
-    object-fit: cover;
+    // width: 100%; // conform photo size
+    // object-fit: cover; // conform photo size
+    margin: 0 auto;
+    display: block;
   }
 }
 
 .fluidbox__overlay {
   .photo & {
-    background-color: rgba($blue-primary, 0.85);
+    background-color: rgba($blue-darker, 0.85);
+    width: 100vw;
+    height: 100vh;
+    top: inherit;
+    bottom: inherit;
   }
 }
 
 .fluidbox__wrap {
-  display: flex;
-  justify-content: center;
+  // @include flex-display(); // conform photo size
+  // @include justify-content(center); // conform photo size
 }
 
 .section-link {

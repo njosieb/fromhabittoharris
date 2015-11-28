@@ -46,6 +46,13 @@
       body.addClass('no-header');
     }
 
-    $('.photo').fluidbox();
+    $('.photo')
+    .on('openstart.fluidbox', function() {
+      var overlay = $('.fluidbox__overlay');
+      var positionTop = $('#page-body').scrollTop();
+      // positionTop = positionTop - 100;
+      overlay.css({'top': positionTop.toString() + 'px'})
+    })
+    .fluidbox();
   })
 })(jQuery);
