@@ -122,6 +122,32 @@
   background-blend-mode: luminosity;
 }
 
+#photo-gallery {
+  @include flex-display();
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+
+.photo {
+  @include flex(0, 0, 29%);
+  @include flex-display();
+  @include justify-content(center);
+  margin: 1rem 2%;
+  display: block;
+
+  img {
+    max-height: 250px;
+    object-fit: cover;
+  }
+}
+
+.fluidbox__overlay {
+  .photo & {
+    background-color: rgba($blue-primary, 0.85);
+  }
+}
+
 .section-link {
   display: block;
   position: relative;

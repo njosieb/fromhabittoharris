@@ -16,7 +16,7 @@
         }
       },
       context: document.getElementById('page-body')
-    })
+    });
 
     $('#menu-reveal').click(function() {
         doc.sidebarVisible = !doc.sidebarVisible;
@@ -45,5 +45,7 @@
     } else {
       body.addClass('no-header');
     }
+
+    $('.photo').fluidbox();
   })
 })(jQuery);
