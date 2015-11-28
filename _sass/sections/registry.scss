@@ -4,7 +4,8 @@
     padding: 80px 0 20px;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 120%;
+    margin: 0 -10%;
     height: 100%;
     position: relative;
   }
@@ -27,7 +28,7 @@
 
   }
   svg:not(:hover) path {
-    fill: $grey-color !important;
+    fill: $blue-alt !important;
   }
 }
 
