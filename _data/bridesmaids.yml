@@ -1,32 +1,48 @@
 ---
 - name: Jenny
   photo: "jenny.jpg"
-  blurb: "hi there"
+  relation: "Cousin / Sister"
+  hashtag: "SEESTER"
+  funnyThing: "If you hear Nina using a baby voice with Jenny, don't be alarmed.  It's normal."
 
 - name: Jane
   photo: "jane.jpg"
-  blurb:
+  relation: "High School Best Friend"
+  hashtag: "SuperMom"
+  funnyThing: "Shares many similarities with Nina. One Christmas they bought eachother the same exact gift!"
 
 - name: Courtney
   photo: "courtney.jpg"
-  blurb:
+  relation: "Friend"
+  hashtag: "QueenOfKareoke"
+  funnyThing: "Was co-conspirator who helped Charlie know Nina's engagement ring preferences & size."
 
 - name: Ann
   photo: "anne.jpg"
-  blurb:
+  relation: Cousin
+  hashtag: "GetYourHairDid"
+  funnyThing: "Will have her 10 Year Wedding Anniversary on July 2, 2016!"
 
 - name: Monica
   photo: "monica.jpg"
-  blurb:
+  relation: "Friend"
+  hashtag: "AntiMovieCommentary"
+  funnyThing: ""
 
 - name: Maddie
   photo: "maddie.jpg"
-  blurb:
+  relation: "Future Sister"
+  hashtag: "Namaste"
+  funnyThing: "Introduced Nina to the world of Hot Yoga!"
 
 - name: Rebecca
   photo: "rebecca.jpg"
-  blurb:
+  relation: "Friend from Rome"
+  hashtag: "CiaoBella"
+  funnyThing: "Nina loves sharing with her awkward life stories!"
 
 - name: Andi
   photo: "andi.jpg"
-  blurb:
+  relation: "Former Neighbor"
+  hashtag: "WatchHerWhip"
+  funnyThing: "One of Nina's favorite dancing buds!"

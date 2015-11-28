@@ -1,133 +1,55 @@
 <div id="story-selection">
 	<div id="selection-container">
-		<div id="select-her" class="selection-holder">
-			<div class="selection-box" style="background-image: url({{site.baseurl}}/assets/nina.jpg);">
-				<h3 class="selection-text">About Her</h3>
+
+		{% for selection in site.data.stories %}
+		<div id="select-{{selection.partial}}" class="selection-holder">
+			<div class="selection-box" style="background-image: url({{site.baseurl}}/assets/{{selection.image}});">
+				<h3 class="selection-text">{{selection.title}}</h3>
 			</div>
 		</div>
-		<div id="select-him" class="selection-holder">
-			<div class="selection-box" style="background-image: url({{site.baseurl}}/assets/charlie.jpg);">
-				<h3 class="selection-text">About Him</h3>
-			</div>
-		</div>
-		<div id="select-met" class="selection-holder">
-			<div class="selection-box" style="background-image: url({{site.baseurl}}/assets/barlouie.jpg);">
-				<h3 class="selection-text">How We Met</h3>
-			</div>
-		</div>
-		<div id="select-dating" class="selection-holder">
-			<div class="selection-box" style="background-image: url({{site.baseurl}}/assets/jamestaylor.jpg)">
-				<h3 class="selection-text">Dating</h3>
-			</div>
-		</div>
-		<div id="select-proposal" class="selection-holder">
-			<div class="selection-box" style="background-image: url({{site.baseurl}}/assets/engaged.jpg);">
-				<h3 class="selection-text">Popping the Question</h3>
-			</div>
-		</div>
+		{% endfor %}
+
 	</div>
 </div>
 <div id="story-viewer">
-	<div id="story-controls">
-		<div id="select-back" class="control-button">
-			<span id="back-text" class="button-text">
-				<i class="fa fa-level-up fa-flip-horizontal"></i>
-				Back
-			</span>
-		</div>
-		<div id="select-next" class="control-button">
-			<span id="next-story-button" class="button-text">
-				<i class="fa fa-hand-o-right"></i>
-				Next
-			</span>
-		</div>
-	</div>
 	<div id="story-container">
-		<div id="story-about-her" class="story">
-			<h2 class="story-header">About Her</h2>
-			<p>
-				Once upon a time, Charlie and Nina decided to be in two musicals at Chaminade, which is where they first met althought they did not spend much time together.
-			</p>
+
+		{% for story in site.data.stories %}
+		<div id="story-{{story.partial}}" class="story">
+			<h2 class="story-header">{% if story.alt %}{{story.alt}}{% else %}{{story.title}}{% endif %}</h2>
+			{% if story.subtitle %}<h4 class="story-subheader">{{story.subtitle}}</h4>{% endif %}
+
+			<div class="story-body" id="{{story.partial}}-scroll">
+				{% include_relative _sections/partials/{{story.partial}}.html %}
+
+			</div>
+
+			<div class="story-scroll-buttons">
+				<div class="scroll-control scroll-left"></div>
+				<div class="scroll-control scroll-right"></div>
+			</div>
+
+			<div id="story-controls">
+				<div class="control-button select-back">
+					<span class="button-text back-button">
+						<i class="fa fa-level-up fa-flip-horizontal"></i>
+						Back
+					</span>
+				</div>
+				<div class="control-button select-next">
+					<span class="button-text next-story-button">
+						{% if forloop.index == (forloop.length - 1) %}
+						<i class="fa fa-hand-peace-o"></i>
+						End
+						{% else %}
+						<i class="fa fa-hand-o-right"></i>
+						Next
+						{% endif %}
+					</span>
+				</div>
+			</div>
 		</div>
-		<div id="story-about-him" class="story">
-			<h2 class="story-header">About Him</h2>
-			<p>
-				Athough they had met at this early time, it would be a few years before their paths crossed once more.
-			</p>
-		</div>
-		<div id="story-how-met" class="story">
-			<h2 class="story-header">How We Met</h2>
-			<p>
-			The first time Charlie and Nina met was at a Halloween party where several other Catholic young adults were gathered for a fun night. Nina went with her friend as two of the nurses from Grey’s Anatomy and was familiar with most everyone at the party. Charlie was invited by a friend, came dressed as Waldo, and was completely new to the young adult ministry crowd. At one point Nina went out to the back porch to grab another drink, and Charlie followed her outside to chat her up. When he mentioned he had been in the seminary Nina shared that she had been in the convent, and from then on they had infinite topics of conversation.
-			</p>
+		{% endfor %}
 
-			<p>
-			Later they would meet up again by going to Mass together, although most of the time they never actually planned on it. See, they both went to Mass at the nearby Cathedral for the Sunday evening Mass, except Nina would be there a little early sitting by myself and Charlie would show up and decide to sit next to me. The first time this happened he came up to her row and, after genuflecting, ask her, “Is there enough room here I can squeeze in?” Due to the immense space of the Cathedral and the sprawl of attendees, Nina exclaimed, “Of course!” both from laughing as if there was no room but also from pure joy that he’d choose to sit with her. Nina would sit there giddy & trying to focus but at the same time thinking how cute he was and anxiously waiting for the sign of peace (because they might hug!).
-			</p>
-
-			<p>
-			The first couple of Masses like this Charlie would sit down after Mass and, it seemed like he was back in deep prayer, so Nina would nervously say goodbye and leave. It took her awhile of kicking herself before, at last, she went back into the Cathedral to where he was sitting and asked if he’d like to grab dinner. He eagerly said yes and we had our first night to really get to know each other in new ways.
-			</p>
-
-			<p>
-			What Nina and Charlie realized at that dinner, was that they had known each other for most of their lives! As it turned out, they were in plays together at Chaminade, Charlie’s high school, including “Jesus Christ Superstar” where Nina was one of the apostles and he, well, was Leper #5. Also, they figured out that the parish Nina worked at as DRE was Charlie’s home parish where his family grew up. It only then dawned on them that they had helped lead a Confirmation retreat together! Eventually they realized just how many mutual friends we had through St. Louis’ tightly ­knit Catholic community.
-			</p>
-
-			</p>
-		</div>
-		<div id="story-dating" class="story">
-			<h2 class="story-header">Dating Sucks</h2>
-			<h4 class="story-subheader">(but not this time!)</h4>
-			<p>
-			They were friends for several months before they started dating, and even by that point we had become best friends who loved hanging out as often as we could and sharing the beautiful city life of St. Louis together.
-			</p>
-
-			<p>
-			Nina loves remembering how Charlie asked her out by asking, “What if I asked you out on a date?” She happily replied, “I would say, ‘Yes!’” Then, with a sweet smile on his face, he added, “Because I like you!” Nina could feel her cheeks getting red as she smiled and said, “I like you too!”
-			</p>
-
-			<p>
-			While Nina & Charlie were dating, they fell in love with each other early on and spoke a lot about marriage.
-			</p>
-
-		</div>
-		<div id="story-engaged" class="story">
-			<h2 class="story-header">Popping the Question</h2>
-			<p>
-			Although Nina knew Charlie wanted to ask her to marry him, it was simply a matter of when he would ask. It didn’t take too long but at times it seemed like forever to Nina! :) She told him she wanted to be surprised, but at times she revealed a little impatience, so he made her believe it would not be for many more months, for “budgetary reasons,” which he made up but it helped Nina be present to their dating status. That was all the distraction Charlie needed as he picked up the ring on the very day of their 1 year anniversary (Nina totally didn’t know that!).
-			</p>
-
-			<p>
-			On Saturday, May 9, 2015, Nina & Charlie spent the entire day together. They started with a 5­mile Heart Walk at Busch Stadium with his family. Afterwards they took the metro train to a wonderful breakfast cafe downtown, then walked through light rain. All the while Charlie had a rain jacket on and for some reason he kept complaining about the “granola bars” in his pocket that he hadn’t eaten yet. Turned out he mentioned the granola bars so Nina wouldn’t notice the feel of the ring box whenever she would brush up against his jacket!
-			</p>
-
-			<p>
-			That afternoon, as if the day wasn’t busy enough, they went to the St. Louis Art museum which is a beautiful building at the top of the biggest hill in Forest Park. They were there for a long time, and when it closed at 5pm Charlie asked if she would like to take a walk to a small stone patio on the top of the big hill. While looking out over the hill, Charlie began saying really sweet things about how great the past year had been and how happy he was to have Nina in his life.
-			</p>
-
-			<blockquote>
-			<p>
-			“Do you want to make this forever?” Charlie asked, while hugging me so close that I could feel his heart pounding.
-			</p>
-
-			<p>
-			“Of course!” Nina shouted, still a little unsure about what would come next.
-			</p>
-			</blockquote>
-
-			<p>
-			Then Charlie got down on one knee, looked up at Nina, and asked:
-			</p>
-
-			<blockquote>
-			<p>
-			“Nina Josephine Blaida, will you marry me?” Once she caught her breath, without hesitation and with so much excitement Nina said:
-			</p>
-
-			<p>
-			“Yes! Absolutely! Of course I will!”
-			</p>
-			</blockquote>
-		</div>
 	</div>
 </div>

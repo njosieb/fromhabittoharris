@@ -2,11 +2,11 @@
   text-align: center;
   font-family: "Rock Salt";
   position: absolute;
-  background-color: rgba($grey-dark, 0.9);
+  background-color: rgba($blue-primary, 0.9);
   color: white;
   padding: 40px;
   top: 50%;
-  left: 30px;
+  left: 12%;
 
   h1 {
     font-size: 4.5em;
@@ -95,71 +95,4 @@
       transform: scale3d(0.8, 0.8, 1);
     }
   }
-}
-
-#party li {
-  font-family: cursive;
-  font-size: larger;
-  list-style-type: none;
-}
-h3 {
-  font-size: 40px;
-  margin-left: auto;
-}
-.party-container{
-	@include flex-display();
-	@include justify-content(space-around);
-}
-.party-card .front {
-  overflow: hidden;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-img {
-  object-fit: cover;
-}
-
-.party-container ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-li.party-card {
-  flex-basis: 50%;
-  position: relative;
-  height: 136px;
-  transition: all .6s;
-  width: 136px;
-  transform-style: preserve-3d;
-}
-
-.front img {
-  position: absolute;
-  top: -20px;
-}
-.front, .back {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  backface-visibility: hidden;
-}
-
-.party-card .back {
-  z-index: 1;
-  transform: rotateY(-180deg);
-  background-color: white;
-}
-
-li.party-card:hover {
-  transform: rotateY(180deg);
-}
-
-ul.party-members {
-  -webkit-perspective: 1000;
-}
-
-.bridesmaid-name {
-  text-align: center;
 }
