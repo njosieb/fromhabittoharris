@@ -9,7 +9,7 @@
       {% for bridesmaid in site.data.bridesmaids %}
       <div class="party-card" id="{{bridesmaid.name}}">
         <div class="card-wrapper">
-          <div class="picture" style="background-image: url(/assets/{{bridesmaid.photo}})"></div>
+          <div class="picture" style="background-image: url(/assets/wedding-party/{{bridesmaid.photo}})"></div>
           <h4 class="party-member-name">{{bridesmaid.name}}</h4>
           <div class="party-member-info">
             <h5 class="party-member-relation">{{bridesmaid.relation}}</h5>
@@ -28,7 +28,7 @@
     {% for groomsman in site.data.groomsmen %}
     <div class="party-card" id="{{groomsman.name}}">
       <div class="card-wrapper">
-        <div class="picture" style="background-image: url(/assets/{{groomsman.photo}})"></div>
+        <div class="picture" style="background-image: url(/assets/wedding-party/{{groomsman.photo}})"></div>
         <h4 class="party-member-name">{{groomsman.name}}</h4>
         <div class="party-member-info">
           <h5 class="party-member-relation">{{groomsman.relation}}</h5>
