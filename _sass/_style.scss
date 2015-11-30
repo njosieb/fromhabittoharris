@@ -189,6 +189,7 @@
   @include media-query($on-palm) {
     padding: 4px;
     border-width: 2px;
+    @include flex(0, 0, 48%);
   }
 }
 
