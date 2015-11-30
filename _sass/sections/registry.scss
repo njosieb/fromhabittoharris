@@ -8,6 +8,11 @@
     margin: 0 -10%;
     height: 100%;
     position: relative;
+
+    @include media-query($on-palm) {
+      @include flex-wrap(wrap);
+      padding: 1rem 4rem;
+    }
   }
 }
 
@@ -29,6 +34,11 @@
   }
   svg:not(:hover) path {
     fill: $blue-alt !important;
+  }
+
+  @include media-query($on-palm) {
+    @include flex(1, 0, 100%);
+    padding: 1rem 0;
   }
 }
 

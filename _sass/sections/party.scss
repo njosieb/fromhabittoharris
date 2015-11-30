@@ -1,23 +1,63 @@
+#groomsmen {
+  margin-left: 10px;
+  margin-right: -10px;
+
+  @for $i from 1 to 8 {
+    .party-card:nth-child(#{$i}) {
+      z-index: 10 - $i;
+    }
+  }
+
+  @include media-query($on-palm) {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+}
+
+#bridesmaids {
+  margin-right: 10px;
+  margin-left: -10px;
+
+  h3 {
+    text-align: right;
+  }
+
+  @for $i from 1 to 8 {
+    .party-card:nth-child(#{$i}) {
+      z-index: 10 - $i;
+    }
+  }
+
+  @include media-query($on-palm) {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
 h3 {
   font-size: 40px;
   margin-left: auto;
+  font-weight: 100;
+
+  @include media-query($on-palm) {
+    font-size: 2rem;
+  }
 }
 
 .party-container{
 	@include flex-display();
 	@include justify-content(space-around);
-}
 
-.party-card .picture {
-  overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  .party-members {
+    @include flex-display();
+    @include flex-wrap(wrap);
+    position: relative;
+    z-index: 1;
+  }
 
-.party-container .party-members {
-  @include flex-display();
-  @include flex-wrap(wrap);
+  @include media-query($on-palm) {
+    @include justify-content(space-between);
+  }
 }
 
 .party-card {
@@ -27,10 +67,32 @@ h3 {
   margin-top: 1.5em;
   position: relative;
   list-style-type: none;
+
+  @include media-query($on-palm) {
+    @include flex-basis(100%);
+  }
 }
 
 .card-wrapper {
   position: relative;
+  overflow: hidden;
+
+  &:hover {
+    overflow: visible;
+
+    .party-member-thing {
+      overflow: visible;
+      padding: 1em;
+      max-height: 400px;
+      border-bottom: 1px solid;
+    }
+  }
+  .picture {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .picture {
@@ -39,6 +101,12 @@ h3 {
   width: 200px;
   border-radius: 100%;
   overflow: hidden;
+
+  @include media-query($on-palm) {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+  }
 }
 
 .party-member-name {
@@ -46,6 +114,10 @@ h3 {
   font-family: $splash-font;
   font-size: 2em;
   color: $blue-primary;
+
+  @include media-query($on-palm) {
+    font-size: 1.5rem;
+  }
 }
 
 #Bill, #Jenny, #Andi {
@@ -66,19 +138,9 @@ h3 {
   .card-wrapper {
     right: 5px;
   }
-}
 
-#groomsmen {
-  margin-left: 10px;
-  margin-right: -10px;
-}
-
-#bridesmaids {
-  margin-right: 10px;
-  margin-left: -10px;
-
-  h3 {
-    text-align: right;
+  @include media-query($on-palm) {
+    @include justify-content(center);
   }
 }
 
@@ -90,13 +152,29 @@ h3 {
   font-weight: 800;
   font-style: italic;
   font-size: 1.2em;
+
+  @include media-query($on-palm) {
+    font-size: .9rem;
+  }
 }
 
 .party-member-relation {
   font-weight: 600;
   font-size: 1em;
+
+  @include media-query($on-palm) {
+    font-size: .8rem;
+  }
 }
 
 .party-member-thing {
+  position: absolute;
+  width: 100%;
   max-width: 200px;
+  background-color: $background-swatch;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition-duration: .3s;
+  transition-property: max-height, padding;
 }

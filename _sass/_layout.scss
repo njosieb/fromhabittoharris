@@ -88,7 +88,6 @@ main {
     height: 0;
     display: block;
     z-index: 9;
-    // background: rgba(0,0,0,0.2);
     content: '';
     opacity: 0;
     -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
@@ -97,6 +96,8 @@ main {
 }
 
 #page-body {
+  @include flex-display();
+  @include flex-direction(column);
   position: relative;
   height: 100%;
   overflow-x: hidden;
@@ -105,8 +106,6 @@ main {
   z-index: 8;
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
-  @include flex-display();
-  @include flex-direction(column);
   background-color: $background-swatch;
 
   @include media-query($on-palm) {
@@ -144,6 +143,10 @@ section {
     }
   }
 
+  &:nth-child(odd) .section-header {
+    color: $blue-primary;
+  }
+
   > .wrapper {
     padding-bottom: 5em;
   }
@@ -152,8 +155,16 @@ section {
 		text-align: center;
 		font-style: italic;
 		font-size: 48pt;
-		font-family: "Lobster Two";
+		font-family: $fancy-font;
 	}
+
+  @include media-query($on-palm) {
+    padding-bottom: 1rem;
+
+    .section-header {
+      font-size: 3.2rem;
+    }
+  }
 }
 
 .section-body {
