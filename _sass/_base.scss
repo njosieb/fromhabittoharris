@@ -23,6 +23,7 @@ body {
   color: $black;
   background-color: $background-swatch;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 p {
