@@ -2,10 +2,15 @@
   margin-left: 10px;
   margin-right: -10px;
 
-  @for $i from 0 to 7 {
+  @for $i from 1 to 8 {
     .party-card:nth-child(#{$i}) {
-      z-index: 9 - $i;
+      z-index: 10 - $i;
     }
+  }
+
+  @include media-query($on-palm) {
+    margin-left: 5px;
+    margin-right: 0;
   }
 }
 
@@ -17,10 +22,15 @@
     text-align: right;
   }
 
-  @for $i from 0 to 7 {
+  @for $i from 1 to 8 {
     .party-card:nth-child(#{$i}) {
-      z-index: 9 - $i;
+      z-index: 10 - $i;
     }
+  }
+
+  @include media-query($on-palm) {
+    margin-left: 0;
+    margin-right: 5px;
   }
 }
 
@@ -28,6 +38,10 @@ h3 {
   font-size: 40px;
   margin-left: auto;
   font-weight: 100;
+
+  @include media-query($on-palm) {
+    font-size: 2rem;
+  }
 }
 
 .party-container{
@@ -40,6 +54,10 @@ h3 {
     position: relative;
     z-index: 1;
   }
+
+  @include media-query($on-palm) {
+    @include justify-content(space-between);
+  }
 }
 
 .party-card {
@@ -49,6 +67,10 @@ h3 {
   margin-top: 1.5em;
   position: relative;
   list-style-type: none;
+
+  @include media-query($on-palm) {
+    @include flex-basis(100%);
+  }
 }
 
 .card-wrapper {
@@ -79,6 +101,12 @@ h3 {
   width: 200px;
   border-radius: 100%;
   overflow: hidden;
+
+  @include media-query($on-palm) {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+  }
 }
 
 .party-member-name {
@@ -86,6 +114,10 @@ h3 {
   font-family: $splash-font;
   font-size: 2em;
   color: $blue-primary;
+
+  @include media-query($on-palm) {
+    font-size: 1.5rem;
+  }
 }
 
 #Bill, #Jenny, #Andi {
@@ -106,6 +138,10 @@ h3 {
   .card-wrapper {
     right: 5px;
   }
+
+  @include media-query($on-palm) {
+    @include justify-content(center);
+  }
 }
 
 .party-member-info {
@@ -116,11 +152,19 @@ h3 {
   font-weight: 800;
   font-style: italic;
   font-size: 1.2em;
+
+  @include media-query($on-palm) {
+    font-size: .9rem;
+  }
 }
 
 .party-member-relation {
   font-weight: 600;
   font-size: 1em;
+
+  @include media-query($on-palm) {
+    font-size: .8rem;
+  }
 }
 
 .party-member-thing {

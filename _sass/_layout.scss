@@ -156,7 +156,11 @@ section {
 		text-align: center;
 		font-style: italic;
 		font-size: 48pt;
-		font-family: "Lobster Two";
+		font-family: $fancy-font;
+
+    @include media-query($on-palm) {
+      font-size: 3.2rem;
+    }
 	}
 }
 
