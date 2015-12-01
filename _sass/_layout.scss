@@ -91,7 +91,7 @@ main {
     z-index: 9;
     content: '';
     opacity: 0;
-    transform: translateX(0);
+    transform: translateX(300px);
     transition-duration: 0.5s;
     transition-property: opacity, width, transform;
   }
@@ -122,11 +122,12 @@ aside {
   width: 300px;
   height: calc(100% - 55px);
   background-color: $blue-primary;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   visibility: hidden;
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 300px);
-  transform: translate3d(0, 0, 300px);
+  -webkit-transform: translate3d(300px, 0, 300px);
+  transform: translate3d(300px, 0, 300px);
   transition: all 0.5s;
 }
 
