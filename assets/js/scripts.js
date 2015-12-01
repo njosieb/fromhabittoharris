@@ -52,7 +52,7 @@
       var positionTop = $('#page-body').scrollTop();
       // positionTop = positionTop - 100;
       body.addClass('no-header');
-      overlay.css({'top': positionTop.toString() + 'px'})
+      overlay.css({'-webkit-transform': 'translateY(' + positionTop.toString() + 'px)', 'transform': 'translateY('+ positionTop.toString() + 'px)'});
     })
     .on('closestart.fluidbox', function() {
       body.removeClass('no-header');
