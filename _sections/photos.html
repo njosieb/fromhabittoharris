@@ -5,10 +5,13 @@
   <div id="photo-gallery" class="photos-wrapper">
     {% for file in site.static_files %}
       {% if file.path contains '/assets/photos/' %}
-      {% assign photoId = file.path | remove:'/assets/photos/' | remove:'.jpg' %}
-      <a href="{{file.path}}" class="photo">
-        <img id="{{photoId}}" src="{{file.path}}" alt="" />
-      </a>
+        {% unless file.path contains '/assets/photos/thumbnails/' %}
+          {% assign photoId = file.path | remove:'/assets/photos/' | remove:'.jpg' %}
+          {% capture thumbpath %}/assets/photos/thumbnails/{{photoId}}.png{% endcapture %}
+          <a href="{{file.path}}" class="photo">
+            <img id="{{photoId}}" src="{{thumbpath}}" alt="" />
+          </a>
+        {% endunless %}
       {% endif %}
     {% endfor %}
   </div>
