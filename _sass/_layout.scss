@@ -96,8 +96,6 @@ main {
 }
 
 #page-body {
-  // @include flex-display();
-  // @include flex-direction(column);
   position: relative;
   height: 100%;
   overflow-x: hidden;
@@ -163,6 +161,10 @@ section {
 
     .section-header {
       font-size: 3.2rem;
+    }
+
+    > .wrapper {
+      padding-bottom: 1rem;
     }
   }
 }
