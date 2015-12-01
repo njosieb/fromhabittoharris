@@ -180,10 +180,10 @@
 
   img {
     max-height: 250px;
-    // width: 100%; // conform photo size
-    // object-fit: cover; // conform photo size
-    margin: 0 auto;
-    display: block;
+    width: 100%; // conform photo size
+    object-fit: cover; // conform photo size
+    // margin: 0 auto;
+    // display: block;
   }
 
   @include media-query($on-palm) {
@@ -204,8 +204,8 @@
 }
 
 .fluidbox__wrap {
-  // @include flex-display(); // conform photo size
-  // @include justify-content(center); // conform photo size
+  @include flex-display(); // conform photo size
+  @include justify-content(center); // conform photo size
 }
 
 .section-link {
