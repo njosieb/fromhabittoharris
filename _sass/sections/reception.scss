@@ -1,0 +1,50 @@
+#reception {
+  background-color: $blue-darker;
+
+  .section-header {
+    color: white;
+  }
+}
+
+#fireworks {
+  @include flex-display();
+  @include flex-wrap(wrap);
+  @include justify-content(space-around);
+  position: relative;
+}
+
+.firework-container {
+  @include flex-display();
+  @include justify-content(center);
+  @include align-items(center);
+  position: relative;
+  height: 375px;
+  width: 375px;
+}
+
+.firework {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.firework-text {
+  text-align: center;
+  position: relative;
+}
+
+.feature-text {
+  font-family: $splash-font;
+  font-size: 3rem;
+  color: $red-color;
+
+  &:hover {
+    color: $red-color;
+  }
+}
+
+@keyframes sparkle {
+  
+}

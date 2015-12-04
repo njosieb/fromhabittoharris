@@ -17,14 +17,10 @@ layout: home
 {% for section in site.data.sections %}
 
   <section id="{{section.id}}">
-    <div class="wrapper">
-      <h1 class="section-header">{{section.title}}</h1>
-      <div class="section-body">
+    
+    <h1 class="section-header">{{section.title}}</h1>
+    {% include_relative _sections/{{section.id}}.html %}
 
-        {% include_relative _sections/{{section.id}}.html %}
-
-      </div>
-    </div>
   </section>
 
 {% endfor %}

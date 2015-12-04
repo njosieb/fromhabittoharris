@@ -1,0 +1,15 @@
+---
+- id: firework-show
+  text: "Fireworks!"
+
+- id: menu
+  text: "Chase Catering"
+
+- id: live-band
+  text: "Live Band!"
+
+- id: gather
+  text: "Begins @ 6:30"
+
+- id: dinner
+  text: "Dinner @ 7:30"

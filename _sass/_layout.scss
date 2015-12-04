@@ -135,17 +135,17 @@ section {
   position: relative;
   padding-bottom: 5em;
 
-  &:nth-child(even) {
+  &#about-us, &#ceremony, &#hotel, &#photos {
     background-color: $blue-primary;
     color: white;
 
     a {
       color: $blue-alt;
     }
-  }
 
-  &:nth-child(odd) .section-header {
-    color: $blue-primary;
+    .section-header {
+      color: white;
+    }
   }
 
   > .wrapper {
@@ -157,6 +157,7 @@ section {
 		font-style: italic;
 		font-size: 48pt;
 		font-family: $fancy-font;
+    color: $blue-primary;
 	}
 
   @include media-query($on-palm) {

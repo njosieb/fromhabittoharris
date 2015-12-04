@@ -1,0 +1,10 @@
+<div id="fireworks" class="section-body">
+  {% for feature in site.data.reception %}
+    <div id="{{feature.id}}" class="firework-container">
+      {% include_relative assets/fireworks.svg %}
+      <div class="firework-text">
+        <a class="feature-text">{{feature.text}}</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
