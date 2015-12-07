@@ -22,14 +22,6 @@
   width: 375px;
 }
 
-.firework {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
 .firework-text {
   text-align: center;
   position: relative;
@@ -45,6 +37,45 @@
   }
 }
 
-@keyframes sparkle {
-  
+.firework {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  path {
+    fill: transparent;
+  }
+}
+
+.firework-container:hover .firework {
+  -webkit-animation-name: firework;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-out;
+  transform-origin: center;
+
+  path {
+    fill: $blue-alt;
+  }
+}
+
+// TODO: Make fireworks a continual show in background of reception area
+// TODO: Add more of a spark with stroke: white
+// TODO: Optimize timing funciton with cubic-bezier
+// TODO: browser compatibility
+@-webkit-keyframes firework {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2) translate(50%, 50%);
+  }
 }
