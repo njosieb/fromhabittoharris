@@ -1,55 +1,60 @@
-<div id="story-selection">
-	<div id="selection-container">
+<div class="wrapper">
+  <div class="section-body">
+		<div id="story-selection">
+			<div id="selection-container">
 
-		{% for selection in site.data.stories %}
-		<div id="select-{{selection.partial}}" class="selection-holder">
-			<div class="selection-box" style="background-image: url({{site.baseurl}}/assets/about-us/{{selection.image}});">
-				<h3 class="selection-text">{{selection.title}}</h3>
+				{% for selection in site.data.stories %}
+				<div id="select-{{selection.partial}}" class="selection-holder">
+					<div class="selection-box" style="background-image: url({{site.baseurl}}/assets/about-us/{{selection.image}});">
+						<h3 class="selection-text">{{selection.title}}</h3>
+					</div>
+				</div>
+				{% endfor %}
+
 			</div>
 		</div>
-		{% endfor %}
+		<div id="story-viewer">
+			<div id="story-container">
 
-	</div>
-</div>
-<div id="story-viewer">
-	<div id="story-container">
+				{% for story in site.data.stories %}
+				<div id="story-{{story.partial}}" class="story">
+					<h2 class="story-header">{% if story.alt %}{{story.alt}}{% else %}{{story.title}}{% endif %}</h2>
+					{% if story.subtitle %}<h4 class="story-subheader">{{story.subtitle}}</h4>{% endif %}
 
-		{% for story in site.data.stories %}
-		<div id="story-{{story.partial}}" class="story">
-			<h2 class="story-header">{% if story.alt %}{{story.alt}}{% else %}{{story.title}}{% endif %}</h2>
-			{% if story.subtitle %}<h4 class="story-subheader">{{story.subtitle}}</h4>{% endif %}
+					<div id="story-controls">
+						<div class="control-button select-back">
+							<span class="button-text back-button">
+								<i class="fa fa-level-up fa-flip-horizontal"></i>
+								Back
+							</span>
+						</div>
+						<div class="control-button select-next">
+							<span class="button-text next-story-button">
+								{% if forloop.index == (forloop.length - 1) %}
+								<i class="fa fa-hand-peace-o"></i>
+								End
+								{% else %}
+								<i class="fa fa-hand-o-right"></i>
+								Next
+								{% endif %}
+							</span>
+						</div>
+					</div>
 
-			<div class="story-body" id="{{story.partial}}-scroll">
-				{% include_relative _sections/partials/{{story.partial}}.html %}
+					<div class="story-body" id="{{story.partial}}-scroll">
+						{% include_relative _sections/partials/{{story.partial}}.html %}
 
-			</div>
+					</div>
 
-			<div class="story-scroll-buttons">
-				<div class="scroll-control scroll-left"></div>
-				<div class="scroll-control scroll-right"></div>
-			</div>
+					<div class="story-scroll-buttons">
+						<div class="scroll-control scroll-left"></div>
+						<div class="scroll-control scroll-right"></div>
+					</div>
 
-			<div id="story-controls">
-				<div class="control-button select-back">
-					<span class="button-text back-button">
-						<i class="fa fa-level-up fa-flip-horizontal"></i>
-						Back
-					</span>
 				</div>
-				<div class="control-button select-next">
-					<span class="button-text next-story-button">
-						{% if forloop.index == (forloop.length - 1) %}
-						<i class="fa fa-hand-peace-o"></i>
-						End
-						{% else %}
-						<i class="fa fa-hand-o-right"></i>
-						Next
-						{% endif %}
-					</span>
-				</div>
+				{% endfor %}
+
 			</div>
 		</div>
-		{% endfor %}
-
 	</div>
 </div>

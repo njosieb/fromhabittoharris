@@ -37,8 +37,13 @@ $grey-light:       #aeb0b5;
 $grey-lighter:     #d6d7d9;
 $grey-lightest:    #f1f1f1;
 
-$focus-color:      #3e94cf;
-$visited-color:    #4c2c92;
+$gold-color:       #fdb81e;
+$green-color:      #2e8540;
+$blue-focus:       #3e94cf;
+$purple-color:     #4c2c92;
+
+$focus-color:      $blue-focus;
+$visited-color:    $purple-color;
 
 $background-swatch:$grey-lightest;
 
@@ -72,5 +77,6 @@ $on-tablet:        800px;
         "style",
         "sections/about",
         "sections/party",
+        "sections/reception",
         "sections/registry"
 ;

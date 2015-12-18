@@ -8,7 +8,7 @@
 - name: George
   photo: "george.jpg"
   relation: "Brother"
-  hashtag:
+  hashtag: "DudeYou'reGettingADell"
   funnyThing:
 
 - name: Eddie
@@ -20,29 +20,29 @@
 - name: Will
   photo: "will.jpg"
   relation: "Brother"
-  hashtag: 
+  hashtag:
   funnyThing:
 
 - name: Patrick
   photo: "patrick.jpg"
   relation: "Friend"
-  hashtag:
+  hashtag: "Lawyered"
   funnyThing:
 
 - name: Tyler
   photo: "tyler.jpg"
   relation: "Friend"
-  hashtag:
+  hashtag: "TLaw"
   funnyThing:
 
 - name: Matt
   photo: "matt.jpg"
   relation: "Friend"
-  hashtag:
+  hashtag: "CanadianBacon"
   funnyThing:
 
 - name: Andy
   photo: "andy.jpg"
-  relation: "Brother of Bride"
+  relation: "Future Brother-In-Law"
   hashtag: "AndyMan"
   funnyThing:

@@ -1,42 +1,65 @@
-<p>
-  Ain't No Party Like a Blaida-Harris Party, cuz a Blaida-Harris Party Don't Stop!
+<div class="wrapper">
+  <div class="section-body">
+    <p>
+      Ain't No Party Like a Blaida-Harris Party, cuz a Blaida-Harris Party Don't Stop!
 
-  Nina and Charlie are so excited to have these amazing relatives and friends stand by their side on their wedding day!</p>
-<div class="party-container">
-  <div id="bridesmaids">
-    <h3>Bridesmaids</h3>
+      Nina and Charlie are so excited to have these amazing relatives and friends stand by their side on their wedding day!</p>
+    <div class="party-container">
+      <div id="bridesmaids">
+        <h3 class="party-group-title">Bridesmaids <i class="fa fa-female"></i></h3>
+        <div class="party-members">
+          {% for bridesmaid in site.data.bridesmaids %}
+          <div class="party-card" id="{{bridesmaid.name}}">
+            <div class="card-wrapper">
+              <div class="picture" style="background-image: url(/assets/wedding-party/{{bridesmaid.photo}})"></div>
+              <h4 class="party-member-name">{{bridesmaid.name}}</h4>
+              <div class="party-member-info">
+                <h5 class="party-member-relation">{{bridesmaid.relation}}</h5>
+                <div class="party-member-hashtag"><i class="fa fa-hashtag"></i>{{bridesmaid.hashtag}}</div>
+                <div class="party-member-thing">{{bridesmaid.funnyThing}}</div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    <div id="groomsmen">
+      <h3 class="party-group-title"><i class="fa fa-male"></i> Groomsmen</h3>
+      <div class="party-members">
+        {% for groomsman in site.data.groomsmen %}
+        <div class="party-card" id="{{groomsman.name}}">
+          <div class="card-wrapper">
+            <div class="picture" style="background-image: url(/assets/wedding-party/{{groomsman.photo}})"></div>
+            <h4 class="party-member-name">{{groomsman.name}}</h4>
+            <div class="party-member-info">
+              <h5 class="party-member-relation">{{groomsman.relation}}</h5>
+              <div class="party-member-hashtag"><i class="fa fa-hashtag"></i>{{groomsman.hashtag}}</div>
+              <div class="party-member-thing">{{groomsman.funnyThing}}</div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div id="ushers">
+    <h3 class="party-group-title"><i class="fa fa-user-secret"></i> Ushers</h3>
     <div class="party-members">
-      {% for bridesmaid in site.data.bridesmaids %}
-      <div class="party-card" id="{{bridesmaid.name}}">
+      {% for usher in site.data.ushers %}
+      <div class="party-card" id="{{usher.name}}">
         <div class="card-wrapper">
-          <div class="picture" style="background-image: url(/assets/wedding-party/{{bridesmaid.photo}})"></div>
-          <h4 class="party-member-name">{{bridesmaid.name}}</h4>
+          <div class="picture" style="background-image: url(/assets/wedding-party/{{usher.photo}})"></div>
+          <h4 class="party-member-name">{{usher.name}}</h4>
           <div class="party-member-info">
-            <h5 class="party-member-relation">{{bridesmaid.relation}}</h5>
-            <div class="party-member-hashtag"><i class="fa fa-hashtag"></i>{{bridesmaid.hashtag}}</div>
-            <div class="party-member-thing">{{bridesmaid.funnyThing}}</div>
+            <h5 class="party-member-relation">{{usher.relation}}</h5>
+            <div class="party-member-hashtag"><i class="fa fa-hashtag"></i>{{usher.hashtag}}</div>
+            <div class="party-member-thing">{{usher.funnyThing}}</div>
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
-  </div>
-
-<div id="groomsmen">
-  <h3>Groomsmen</h3>
-  <div class="party-members">
-    {% for groomsman in site.data.groomsmen %}
-    <div class="party-card" id="{{groomsman.name}}">
-      <div class="card-wrapper">
-        <div class="picture" style="background-image: url(/assets/wedding-party/{{groomsman.photo}})"></div>
-        <h4 class="party-member-name">{{groomsman.name}}</h4>
-        <div class="party-member-info">
-          <h5 class="party-member-relation">{{groomsman.relation}}</h5>
-          <div class="party-member-hashtag"><i class="fa fa-hashtag"></i>{{groomsman.hashtag}}</div>
-          <div class="party-member-thing">{{groomsman.funnyThing}}</div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
   </div>
 </div>

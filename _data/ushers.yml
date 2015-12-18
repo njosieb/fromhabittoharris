@@ -1,0 +1,18 @@
+---
+- name: Mike
+  photo: "mike.jpg"
+  relation: "Friend of Groom"
+  hashtag: "partyatfitzs"
+  funnyThing: "He farts a lot"
+
+- name: Justin
+  photo: "justin.jpg"
+  relation: "Friend of Groom"
+  hashtag: "forthetroops"
+  funnyThing: "He farts a lot"
+
+- name: JP
+  photo: "jp.jpg"
+  relation: "Bride's Half Brother"
+  hashtag: "gamecock"
+  funnyThing: "He farts a lot"
