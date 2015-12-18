@@ -23,6 +23,7 @@ body {
   color: $black;
   background-color: $background-swatch;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 p {
@@ -96,6 +97,15 @@ blockquote {
 
   > :last-child {
     margin-bottom: 0;
+  }
+}
+
+/**
+ * Fix fuzzy text on iOS
+ */
+@include media-query($on-palm) {
+  h1, h2, h3, h4, h5, h6, p, a:not(.photo), li, blockquote {
+    -webkit-transform: translate3d(0,0,0);
   }
 }
 

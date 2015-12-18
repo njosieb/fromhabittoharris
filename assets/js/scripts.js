@@ -16,7 +16,7 @@
         }
       },
       context: document.getElementById('page-body')
-    })
+    });
 
     $('#menu-reveal').click(function() {
         doc.sidebarVisible = !doc.sidebarVisible;
@@ -45,5 +45,18 @@
     } else {
       body.addClass('no-header');
     }
+
+    $('.photo')
+    .on('openstart.fluidbox', function() {
+      var overlay = $('.fluidbox__overlay');
+      var positionTop = $('#page-body').scrollTop();
+      // positionTop = positionTop - 100;
+      body.addClass('no-header');
+      overlay.css({'top': positionTop.toString() + 'px'})
+    })
+    .on('closestart.fluidbox', function() {
+      body.removeClass('no-header');
+    })
+    .fluidbox();
   })
 })(jQuery);

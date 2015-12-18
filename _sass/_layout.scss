@@ -12,7 +12,7 @@ header {
   width: 100%;
   left: 0;
   border-bottom: 4px solid $red-color;
-  background-color: $blue-primary;
+  background-color: $blue-dark;
   z-index: 10;
   overflow: hidden;
   transform: translateY(0);
@@ -83,16 +83,17 @@ main {
   &:after {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 0;
-    height: 0;
+    height: 100%;
     display: block;
+    background: rgba($black, .85);
     z-index: 9;
-    // background: rgba(0,0,0,0.2);
     content: '';
     opacity: 0;
-    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    transform: translateX(300px);
+    transition-duration: 0.5s;
+    transition-property: opacity, width, transform;
   }
 }
 
@@ -105,8 +106,6 @@ main {
   z-index: 8;
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
-  @include flex-display();
-  @include flex-direction(column);
   background-color: $background-swatch;
 
   @include media-query($on-palm) {
@@ -116,18 +115,19 @@ main {
 }
 
 aside {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 55px;
-  z-index: 1;
+  z-index: -1;
   width: 300px;
   height: calc(100% - 55px);
   background-color: $blue-primary;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   visibility: hidden;
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 300px);
-  transform: translate3d(0, 0, 300px);
+  -webkit-transform: translate3d(300px, 0, 300px);
+  transform: translate3d(300px, 0, 300px);
   transition: all 0.5s;
 }
 
@@ -138,6 +138,14 @@ section {
   &:nth-child(even) {
     background-color: $blue-primary;
     color: white;
+
+    a {
+      color: $blue-alt;
+    }
+  }
+
+  &:nth-child(odd) .section-header {
+    color: $blue-primary;
   }
 
   > .wrapper {
@@ -148,8 +156,20 @@ section {
 		text-align: center;
 		font-style: italic;
 		font-size: 48pt;
-		font-family: "Lobster Two";
+		font-family: $fancy-font;
 	}
+
+  @include media-query($on-palm) {
+    padding-bottom: 1rem;
+
+    .section-header {
+      font-size: 3.2rem;
+    }
+
+    > .wrapper {
+      padding-bottom: 1rem;
+    }
+  }
 }
 
 .section-body {
@@ -185,10 +205,10 @@ body {
 
     main:after {
       width: calc(100% - 300px);
-      height: 100%;
       opacity: 1;
-      -webkit-transition: opacity 0.5s;
-      transition: opacity 0.5s;
+      transform: translateX(-300px);
+      transition-duration: 0.5s;
+      transition-property: opacity, width, transform;
     }
   }
 }

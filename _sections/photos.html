@@ -1,0 +1,18 @@
+<div class="photos-intro">
+  By <a href="http://www.whiteklumpphotography.com/index2.php#/home/" target="_blank">White-Klump Photography</a>
+</div>
+<div class="photo-container">
+  <div id="photo-gallery" class="photos-wrapper">
+    {% for file in site.static_files %}
+      {% if file.path contains '/assets/photos/' %}
+        {% unless file.path contains '/assets/photos/thumbnails/' %}
+          {% assign photoId = file.path | remove:'/assets/photos/' | remove:'.jpg' %}
+          {% capture thumbpath %}/assets/photos/thumbnails/{{photoId}}.png{% endcapture %}
+          <a href="{{file.path}}" class="photo">
+            <img id="{{photoId}}" src="{{thumbpath}}" alt="" />
+          </a>
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
