@@ -1,11 +1,20 @@
-<div id="fireworks" class="section-body">
-  <!-- TODO: Set more description text in the field instead of a list of firework containers -->
+<div id="fireworks">
   {% for feature in site.data.reception %}
-    <div id="{{feature.id}}" class="firework-container">
+    <div id="{{feature}}" class="firework-container">
       {% include_relative assets/fireworks.svg %}
-      <div class="firework-text">
-        <a class="feature-text">{{feature.text}}</a>
-      </div>
     </div>
   {% endfor %}
+</div>
+<div class="section-body">
+  <div class="reception-info">
+    <h2 class="reception-header">Party Starts @ 6:00pm</h2>
+    <p class="reception-description"><i class="fa fa-glass"></i> Cocktails & Hors D'Oeurves in the <strong>Zodiac Room</strong></p>
+    <h2 class="reception-header">Dinner Served @ 7:00pm</h2>
+    <p class="reception-description"><i class="fa fa-cutlery"></i> Main reception at the top of the Chase in <strong>the Starlight Lounge</strong></p>
+    <p class="reception-description"><strong>Champagne Toasts</strong> & Speeches to follow dinner</p>
+    <h2 class="reception-header">Dance Party ASAP</h2>
+    <p class="reception-description"><i class="fa fa-music"></i> With live performance by a <strong>secret band</strong>! Bring your dancing shoes!</p>
+    <h2 class="reception-header">Fireworks from Forest Park</h2>
+    <p class="reception-description"><i class="fa fa-star-o"></i> <strong>St. Louis' VP Fair</strong> will have fireworks we'll watch from the Chase's two balconies!</p>
+  </div>
 </div>

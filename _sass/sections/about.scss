@@ -120,16 +120,10 @@
 
 .story-body {
   height: calc(100% - 93px - 57px);
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   position: relative;
   padding-top: 1em;
-  -webkit-column-count: 1;
-  -moz-column-count: 1;
-  column-count: 1;
-  -webkit-column-gap: 6em;
-  -moz-column-gap: 6em;
-  column-gap: 6em;
 
   blockquote {
     margin-top: 1.5em;

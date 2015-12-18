@@ -77,16 +77,6 @@ h3 {
   position: relative;
   overflow: hidden;
 
-  &:hover {
-    overflow: visible;
-
-    .party-member-thing {
-      overflow: visible;
-      padding: 1em;
-      max-height: 400px;
-      border-bottom: 1px solid;
-    }
-  }
   .picture {
     overflow: hidden;
     background-size: cover;
@@ -168,13 +158,21 @@ h3 {
 }
 
 .party-member-thing {
-  position: absolute;
+  position: relative;
   width: 100%;
   max-width: 200px;
   background-color: $background-swatch;
-  max-height: 0;
+  height: 100px;
   overflow: hidden;
   padding: 0;
   transition-duration: .3s;
   transition-property: max-height, padding;
+}
+
+#ushers {
+  text-align: center;
+
+  .party-members {
+    @include flex-display();
+  }
 }

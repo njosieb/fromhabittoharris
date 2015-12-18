@@ -6,7 +6,7 @@
       Nina and Charlie are so excited to have these amazing relatives and friends stand by their side on their wedding day!</p>
     <div class="party-container">
       <div id="bridesmaids">
-        <h3>Bridesmaids</h3>
+        <h3 class="party-group-title">Bridesmaids <i class="fa fa-female"></i></h3>
         <div class="party-members">
           {% for bridesmaid in site.data.bridesmaids %}
           <div class="party-card" id="{{bridesmaid.name}}">
@@ -25,7 +25,7 @@
       </div>
 
     <div id="groomsmen">
-      <h3>Groomsmen</h3>
+      <h3 class="party-group-title"><i class="fa fa-male"></i> Groomsmen</h3>
       <div class="party-members">
         {% for groomsman in site.data.groomsmen %}
         <div class="party-card" id="{{groomsman.name}}">
@@ -41,6 +41,25 @@
         </div>
         {% endfor %}
       </div>
+    </div>
+  </div>
+
+  <div id="ushers">
+    <h3 class="party-group-title"><i class="fa fa-user-secret"></i> Ushers</h3>
+    <div class="party-members">
+      {% for usher in site.data.ushers %}
+      <div class="party-card" id="{{usher.name}}">
+        <div class="card-wrapper">
+          <div class="picture" style="background-image: url(/assets/wedding-party/{{usher.photo}})"></div>
+          <h4 class="party-member-name">{{usher.name}}</h4>
+          <div class="party-member-info">
+            <h5 class="party-member-relation">{{usher.relation}}</h5>
+            <div class="party-member-hashtag"><i class="fa fa-hashtag"></i>{{usher.hashtag}}</div>
+            <div class="party-member-thing">{{usher.funnyThing}}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </div>

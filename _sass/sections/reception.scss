@@ -6,11 +6,32 @@
   }
 }
 
+.reception-info {
+  margin: 0 10%;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  text-align: center;
+}
+
+h2.reception-header {
+  font-family: "Rock Salt";
+  margin: 0.75rem 0;
+  color: $blue-alt;
+
+  &:nth-of-type(even) {
+    color: $red-color;
+  }
+}
+
 #fireworks {
   @include flex-display();
   @include flex-wrap(wrap);
   @include justify-content(space-around);
-  position: relative;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .firework-container {
@@ -43,25 +64,73 @@
   left: 0;
   height: 100%;
   width: 100%;
-
-  path {
-    fill: transparent;
-  }
 }
 
-.firework-container:hover .firework {
+.firework-container .firework {
   -webkit-animation-name: firework;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 15s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-out;
   transform-origin: center;
+  opacity: 0;
+}
 
-  path {
-    fill: $blue-alt;
+#red {
+  .firework {
+    -webkit-animation-delay: 0s;
+
+    path {
+      fill: $red-color;
+    }
   }
 }
 
-// TODO: Make fireworks a continual show in background of reception area
+#blue {
+  bottom: 10%;
+  left: 10%;
+
+  .firework {
+    -webkit-animation-delay: 3s;
+    path {
+      fill: $blue-alt;
+    }
+  }
+}
+
+#white {
+  bottom: 15%;
+  right: 10%;
+
+  .firework {
+    -webkit-animation-delay: 6s;
+    path {
+      fill: white;
+    }
+  }
+}
+
+#green {
+  right: 15%;
+  top: 10%;
+
+  .firework {
+    -webkit-animation-delay: 9s;
+    path {
+      fill: $green-color;
+    }
+  }
+}
+
+#yellow {
+  .firework {
+    -webkit-animation-delay: 12s;
+
+    path {
+      fill: $gold-color;
+    }
+  }
+}
+
 // TODO: Add more of a spark with stroke: white
 // TODO: Optimize timing funciton with cubic-bezier
 // TODO: browser compatibility
@@ -70,12 +139,16 @@
     -webkit-transform: scale(0);
     opacity: 1;
   }
-  10% {
+  2% {
     opacity: 1;
-    -webkit-transform: scale(1);
+    -webkit-transform: scale(1.5);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: scale(2.5) translate(25%, 15%);
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(1.2) translate(50%, 50%);
+    -webkit-transform: scale(2.5) translate(25%, 15%);
   }
 }

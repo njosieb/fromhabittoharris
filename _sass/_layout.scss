@@ -134,6 +134,7 @@ aside {
 section {
   position: relative;
   padding-bottom: 5em;
+  overflow: hidden;
 
   &#about-us, &#ceremony, &#hotel, &#photos {
     background-color: $blue-primary;
@@ -158,6 +159,7 @@ section {
 		font-size: 48pt;
 		font-family: $fancy-font;
     color: $blue-primary;
+    margin: 2rem 0 3rem;
 	}
 
   @include media-query($on-palm) {
