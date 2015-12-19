@@ -1,48 +1,48 @@
 ---
 - name: Bill
   photo: "bill.jpg"
-  relation: "2nd Cousin, Twice Removed"
-  hashtag: "princecharming"
-  funnyThing: "He farts a lot"
+  relation: "2nd Cousin Twice Removed"
+  hashtag: "AdventureTime"
+  funnyThing: "The big brother I always wanted, Bill and I have been through so much together and he's helped me become stronger, funnier, and wiser through it all. Haven't met a better man than my best man."
 
 - name: George
   photo: "george.jpg"
   relation: "Brother"
-  hashtag: "DudeYou'reGettingADell"
-  funnyThing:
+  hashtag: "DudeYoureGettingADell"
+  funnyThing: "The dude I shared a room with for the better part of my life. He helped me stay interested in programming and now we share two sides of that same coin. I affectionately refer to him as 'my Georgie' in a grandma-like voice."
 
 - name: Eddie
   photo: "eddie.jpg"
   relation: "Brother"
-  hashtag:
-  funnyThing:
+  hashtag: "Crampus"
+  funnyThing: "Eddie keeps the family laughing when we're acting like goofballs at dinner or holidays. Artistic and creative as hell, he's always been the brother with the coolest ideas, like dubbing my grandpa impersonation 'Crampus'."
 
 - name: Will
   photo: "will.jpg"
   relation: "Brother"
-  hashtag:
-  funnyThing:
+  hashtag: "CollegiateAthlete"
+  funnyThing: "Will is the family's first collegiate athlete as a member of Westminster's varsity soccer team. He was awarded his high school's top scholarship even after being caught forging our mom's signature on the application."
 
 - name: Patrick
   photo: "patrick.jpg"
   relation: "Friend"
   hashtag: "Lawyered"
-  funnyThing:
+  funnyThing: "Friends since high school, Pat was my roommate for almost 2 years at our awesome apartment in the Central West End. Used to call me in the middle of the night in college and ask for a blessing to sink a shot in beer pong."
 
 - name: Tyler
   photo: "tyler.jpg"
   relation: "Friend"
   hashtag: "TLaw"
-  funnyThing:
+  funnyThing: "From being teammates on the high school swim team, to discussing deep philosophical topics, to traveling everywhere together: Tyler and I have that kind of bromance that's got our significant others sometimes concerned."
 
 - name: Matt
   photo: "matt.jpg"
   relation: "Friend"
-  hashtag: "CanadianBacon"
-  funnyThing:
+  hashtag: "Canadian"
+  funnyThing: "Best friends since 8th grade, the only school we ever went to together was the seminary where we performed in a famous skit together with me dressed as Pope Benedict and Matt in collar and grey hair as the seminary's rector."
 
 - name: Andy
   photo: "andy.jpg"
-  relation: "Future Brother-In-Law"
+  relation: "Brother of the Bride"
   hashtag: "AndyMan"
-  funnyThing:
+  funnyThing: "Don't let Andy's gentle, humorous personality and his love for his cute cats fool you: this guy competes in weight lifting competitions all over and could crush you with his giant bear-hugs."

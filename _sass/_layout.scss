@@ -1,5 +1,5 @@
 html, body, main {
-  @include stick-overflow();
+  // @include stick-overflow();
 }
 
 /**
@@ -7,7 +7,7 @@ html, body, main {
  */
 header {
   height: 57px;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   left: 0;
@@ -118,7 +118,6 @@ aside {
   position: fixed;
   right: 0;
   top: 55px;
-  z-index: -1;
   width: 300px;
   height: calc(100% - 55px);
   background-color: $blue-primary;

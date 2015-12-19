@@ -15,7 +15,7 @@
           body.addClass('no-header');
         }
       },
-      context: document.getElementById('page-body')
+      context: document.body
     });
 
     $('#menu-reveal').click(function() {
@@ -49,7 +49,7 @@
     $('.photo')
     .on('openstart.fluidbox', function() {
       var overlay = $('.fluidbox__overlay');
-      var positionTop = $('#page-body').scrollTop();
+      var positionTop = $('body').scrollTop();
       // positionTop = positionTop - 100;
       body.addClass('no-header');
       overlay.css({'-webkit-transform': 'translateY(' + positionTop.toString() + 'px)', 'transform': 'translateY('+ positionTop.toString() + 'px)'});

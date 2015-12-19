@@ -23,6 +23,17 @@ h2.reception-header {
   }
 }
 
+h1.reception-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: $blue-primary;
+}
+
+.reception-description i {
+  color: $blue-primary;
+}
+
 #fireworks {
   @include flex-display();
   @include flex-wrap(wrap);
