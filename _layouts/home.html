@@ -7,16 +7,13 @@
 
     {% include header.html %}
 
-    <main>
+    {% include sidebar.html %}
+    
+    <main id="page-body" class="page-content">
 
-      {% include sidebar.html %}
-
-      <div id="page-body" class="page-content">
         {{ content }}
 
         {% include footer.html %}
-
-      </div>
 
     </main>
 

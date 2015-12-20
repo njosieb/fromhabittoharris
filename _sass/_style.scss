@@ -195,6 +195,12 @@ a#directions {
   }
 }
 
+@include media-query($on-palm) {
+  a.section-link[href="#map"] {
+    display: none;
+  }
+}
+
 #direction-line {
   position: absolute;
   bottom: 26%;

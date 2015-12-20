@@ -56,6 +56,9 @@
     .on('closestart.fluidbox', function() {
       body.removeClass('no-header');
     })
-    .fluidbox();
+    .fluidbox({
+      loader: true,
+      immediateOpen: true
+    });
   })
 })(jQuery);
