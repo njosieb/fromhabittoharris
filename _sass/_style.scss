@@ -189,6 +189,10 @@ a#directions {
       background-image: radial-gradient(89% 78%, circle, transparent 17%, rgba(0,0,0,0.5) 18%, rgba(0, 0, 0, 0.6) 0);
     }
   }
+
+  @include media-query($on-palm) {
+    display: none;
+  }
 }
 
 #direction-line {

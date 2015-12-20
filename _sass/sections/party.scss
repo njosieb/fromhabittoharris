@@ -9,7 +9,7 @@
   }
 
   @include media-query($on-palm) {
-    margin-left: 5px;
+    margin-left: 2px;
     margin-right: 0;
   }
 }
@@ -30,7 +30,7 @@
 
   @include media-query($on-palm) {
     margin-left: 0;
-    margin-right: 5px;
+    margin-right: 2px;
   }
 }
 
@@ -93,9 +93,16 @@ h3 {
   overflow: hidden;
 
   @include media-query($on-palm) {
-    height: 150px;
-    width: 150px;
+    height: 140px;
+    width: 140px;
     margin: 0 auto;
+  }
+}
+
+h3.party-group-title {
+
+  @include media-query($on-palm) {
+    font-size: 1.4rem;
   }
 }
 
@@ -144,7 +151,8 @@ h3 {
   font-size: 1.2em;
 
   @include media-query($on-palm) {
-    font-size: .9rem;
+    font-size: .8rem;
+    white-space: nowrap;
   }
 }
 
@@ -154,6 +162,7 @@ h3 {
 
   @include media-query($on-palm) {
     font-size: .8rem;
+    white-space: nowrap;
   }
 }
 
@@ -165,8 +174,11 @@ h3 {
   height: 200px;
   overflow: hidden;
   padding: 0;
-  transition-duration: .3s;
-  transition-property: max-height, padding;
+
+  @include media-query($on-palm) {
+    font-size: 0.9rem;
+    height: 225px;
+  }
 }
 
 #ushers {
@@ -174,5 +186,15 @@ h3 {
 
   .party-members {
     @include flex-display();
+  }
+
+  @include media-query($on-palm) {
+    .party-members {
+      display: block;
+    }
+
+    .party-member-thing {
+      height: 150px;
+    }
   }
 }
