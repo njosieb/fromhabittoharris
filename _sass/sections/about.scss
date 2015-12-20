@@ -77,6 +77,12 @@
   @include justify-content(flex-start);
 }
 
+#select-about-him, #select-about-her {
+  @include media-query($on-palm) {
+    @include justify-content(center);
+  }
+}
+
 #story-viewer {
   position: absolute;
   top: 0;
