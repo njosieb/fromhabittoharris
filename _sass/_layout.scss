@@ -23,6 +23,12 @@ body {
     transition-duration: 0.5s;
     transition-property: opacity, width, transform;
   }
+
+  @include media-query($on-palm) {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /**
