@@ -1,13 +1,13 @@
 section#top-section {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-image: url(/assets/top-img-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   @include media-query($on-palm) {
-    height: 95vh;
+    height: 95%;
   }
 
   @media (min-width: $on-palm) {
