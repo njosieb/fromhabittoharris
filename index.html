@@ -2,22 +2,21 @@
 layout: home
 ---
 
-<section id="top-section" style="background-image: url({{site.baseurl}}/assets/photos/engage-bw-showing-off-ring-1.jpg);">
+<section id="top-section">
+  <img id="top-image" src="assets/photos/engage-bw-showing-off-ring-1.jpg" alt="" />
   <div class="wrapper">
-  <!-- <section id="top-section" style="background-image: url({{site.baseurl}}/assets/photos/engage-crampis1.jpg);"> -->
     <div class="left-box">
       <h1>Nina</h1>
       <h6>&</h6>
       <h1>Charlie</h1>
     </div>
   </div>
-  <!-- <object type="image/svg+xml" data="assets/header-back.svg"></object> -->
 </section>
 
 {% for section in site.data.sections %}
 
   <section id="{{section.id}}">
-    
+
     <h1 class="section-header">{{section.title}}</h1>
     {% include_relative _sections/{{section.id}}.html %}
 
