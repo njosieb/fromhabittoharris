@@ -6,6 +6,13 @@
     var body = $('body');
     var sectionTopOffset = $('#about-us').offset().top;
 
+    var topSection = $('#top-section');
+    $(window).resize();
+    function resizeBackground() {
+        topSection.height($(window).height() - 47);
+    }
+    resizeBackground();
+
     var firstWaypoint = new Waypoint({
       element: document.getElementById('about-us'),
       handler: function(direction) {
