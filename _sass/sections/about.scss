@@ -91,6 +91,10 @@
   opacity: 0;
   visibility: hidden;
   overflow: visible;
+
+  @include media-query($on-palm) {
+    top: -2rem;
+  }
 }
 
 #story-controls {
