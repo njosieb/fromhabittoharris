@@ -34,7 +34,8 @@ body {
   }
 
   @include media-query($on-palm) {
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
 }
