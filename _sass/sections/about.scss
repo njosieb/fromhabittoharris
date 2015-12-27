@@ -128,10 +128,28 @@
   height: 100%;
   overflow: visible;
   display: none;
+
+  &:after {
+    content: '\f078';
+    display: inline-block;
+    font-family: FontAwesome;
+    text-align: center;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 1.5em;
+    background-image: radial-gradient(ellipse at center, rgba($blue-alt,.8) 0%, rgba(white,0) 60%, rgba(white,0) 100%);
+    background-size: 100% 3em;
+    background-position: bottom;
+  }
+
+  &.hide-scrollbar:after {
+    display: none;
+  }
 }
 
 .story-body {
-  height: calc(100% - 93px - 57px);
+  height: calc(100% - 60px - 56px);
   overflow-x: hidden;
   overflow-y: scroll;
   position: relative;
@@ -157,7 +175,7 @@
     font-size: 1.4em;
     line-height: 1.5em;
     margin-bottom: 0;
-    font-weight: 200;
+    font-weight: 300;
     text-align: justify;
   }
 

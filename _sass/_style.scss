@@ -291,14 +291,14 @@ span.photo-cred {
 .fluidbox__overlay {
   .photo & {
     background-color: rgba($blue-darker, 0.85);
-    width: 100vw;
-    height: 100vh;
+    // width: 100vw;
+    // height: 100vh;
   }
 }
 
 .fluidbox--opened {
   .fluidbox__overlay {
-    z-index: 1 !important;
+    // z-index: 1 !important;
   }
 
   .fluidbox__ghost {

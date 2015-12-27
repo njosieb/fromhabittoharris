@@ -19,9 +19,13 @@ body {
     z-index: 9;
     content: '';
     opacity: 0;
-    transform: translateX(300px);
+    transform: translate3d(300px, 0, 0);
     transition-duration: 0.5s;
     transition-property: opacity, width, transform;
+    -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+   -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+     -o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
   }
 
   @include media-query($on-palm) {
@@ -44,10 +48,14 @@ header {
   background-color: $blue-dark;
   z-index: 11;
   overflow: hidden;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
   -webkit-transition: transform 0.3s;
   -moz-transition: transform 0.3s;
   transition: transform .3s;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+   -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+     -o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
   -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
   backface-visibility: hidden;
   box-shadow: 0 3px 15px 0px #3e3e3e;
@@ -111,6 +119,10 @@ main#page-body {
   z-index: 8;
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+   -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+     -o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
   background-color: $background-swatch;
 }
 
@@ -129,6 +141,10 @@ aside {
   -webkit-transform: translate3d(300px, 0, 0);
   transform: translate3d(300px, 0, 0);
   transition: all 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+   -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+     -o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
 }
 
 section {
@@ -187,7 +203,7 @@ section {
 body {
   &.no-header {
     .site-header {
-      transform: translateY(-100%);
+      transform: translate3d(0, -100%, 0);
     }
   }
 
@@ -195,12 +211,16 @@ body {
     overflow: hidden;
 
     .site-header {
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
     aside {
       visibility: visible;
       -webkit-transition: -webkit-transform 0.5s;
       transition: transform 0.5s;
+      -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+       -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+         -o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+            transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
@@ -212,9 +232,13 @@ body {
     &:after {
       width: calc(100% - 300px);
       opacity: 1;
-      transform: translateX(-300px);
+      transform: translate3d(-300px, 0, 0);
       transition-duration: 0.5s;
       transition-property: opacity, width, transform;
+      -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+   -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+     -o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
     }
   }
 }

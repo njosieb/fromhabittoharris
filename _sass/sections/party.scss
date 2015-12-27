@@ -2,6 +2,16 @@
   margin-left: 10px;
   margin-right: -10px;
 
+  h3.party-group-title {
+    i {
+      color: $blue-alt-light;
+    }
+  }
+
+  h4.party-member-name {
+    color: $blue-alt;  
+  }
+
   @for $i from 1 to 8 {
     .party-card:nth-child(#{$i}) {
       z-index: 10 - $i;
@@ -18,8 +28,16 @@
   margin-right: 10px;
   margin-left: -10px;
 
-  h3 {
+  h3.party-group-title {
     text-align: right;
+
+    i {
+      color: $red-light;
+    }
+  }
+
+  h4.party-member-name {
+    color: $red-color;
   }
 
   @for $i from 1 to 8 {
