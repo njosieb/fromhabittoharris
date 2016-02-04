@@ -3,9 +3,9 @@
   id: about-us
   icon: venus-mars
 
-- title: Wedding Party
-  id: party
-  icon: glass
+# - title: Wedding Party
+#   id: party
+#   icon: glass
 
 - title: Ceremony
   id: ceremony
