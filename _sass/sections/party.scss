@@ -9,7 +9,7 @@
   }
 
   h4.party-member-name {
-    color: $blue-alt;  
+    color: $blue-alt;
   }
 
   @for $i from 1 to 8 {
@@ -135,11 +135,11 @@ h3.party-group-title {
   }
 }
 
-#Bill, #Jenny, #Andi {
+#George, #Ann {
   flex-basis: 100%;
 }
 
-#Bill {
+#George {
   @include justify-content(flex-start);
 
   .card-wrapper {
@@ -147,7 +147,7 @@ h3.party-group-title {
   }
 }
 
-#Jenny, #Andi {
+#Ann {
   @include justify-content(flex-end);
 
   .card-wrapper {

@@ -1,9 +1,9 @@
 ---
-- name: Bill
-  photo: "bill.jpg"
-  relation: "2nd Cousin Twice Removed"
-  hashtag: "GroundhogDay"
-  funnyThing: "Bill is the big brother Charlie always wanted, they've been through so much together & he's helped him become stronger, funnier, and wiser through it all. Charlie hasn't met a better man than his best man."
+# - name: Bill
+#   photo: "bill.jpg"
+#   relation: "2nd Cousin Twice Removed"
+#   hashtag: "GroundhogDay"
+#   funnyThing: "Bill is the big brother Charlie always wanted, they've been through so much together & he's helped him become stronger, funnier, and wiser through it all. Charlie hasn't met a better man than his best man."
 
 - name: George
   photo: "george.jpg"

@@ -1,9 +1,15 @@
 ---
-- name: Jenny
-  photo: "jenny.jpg"
-  relation: "Cousin / Sister"
-  hashtag: "SEESTER"
-  funnyThing: "Jenny is Nina's only girl cousin on her mom's side, so being best friends was a matter of survival. Jenny can make Nina laugh without actually saying something funny. She is Nina's best friend & can't imagine life without her!"
+# - name: Jenny
+#   photo: "jenny.jpg"
+#   relation: "Cousin / Sister"
+#   hashtag: "SEESTER"
+#   funnyThing: "Jenny is Nina's only girl cousin on her mom's side, so being best friends was a matter of survival. Jenny can make Nina laugh without actually saying something funny. She is Nina's best friend & can't imagine life without her!"
+
+- name: Ann
+  photo: "anne.jpg"
+  relation: Cousin
+  hashtag: "GetYourHairDid"
+  funnyThing: "Ann is Nina's cousin who she loves hanging out with & while she colors her hair. Nina helped introduce Ann to her husband who was Nina's at the time, & now they will get to share the same wedding anniversary date!"
 
 - name: Jane
   photo: "jane.jpg"
@@ -16,12 +22,6 @@
   relation: "Friend"
   hashtag: "QueenOfKareoke"
   funnyThing: "Courtney is one of the most authentic person in Nina's life. She teaches Nina how to be confident & have tons of fun. She proactively helped Charlie know Nina's engagement ring preferences & size when she figured he would propose."
-
-- name: Ann
-  photo: "anne.jpg"
-  relation: Cousin
-  hashtag: "GetYourHairDid"
-  funnyThing: "Ann is Nina's cousin who she loves hanging out with & while she colors her hair. Nina helped introduce Ann to her husband who was Nina's at the time, & now they will get to share the same wedding anniversary date!"
 
 - name: Monica
   photo: "monica.jpg"
